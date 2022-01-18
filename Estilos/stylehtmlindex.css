@@ -1,0 +1,135 @@
+:root{
+  --colorLetter1: azure;
+  --colorLetter2: aliceblue;
+  --colorLetter3: beige;
+  --colorMain: rgb(9, 150, 155);
+  --colorMain1: rgb(180, 79, 48);
+  --colorMain2: rgb(231, 161, 56);
+  --colorNav: rgb(12, 109, 64);
+  --colorTitle: rgb(16, 143, 84);
+  --colorFooter: rgb(114, 185, 6);
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header{
+  color: var(--colorLetter1);
+  background-color: var(--colorTitle);
+  padding: 1rem;
+  min-width: 100vw;
+  min-height: 10vh;
+  text-align: center;
+  order: -3;
+}
+
+div{ /* contendrá a nav y main para que puedan convivir juntos en la misma fila */
+  display: flex;
+  flex: 1;
+}
+
+a{
+  color: inherit;
+  display: block;
+}
+nav{
+  min-width: 150px;
+  max-width: 180px;
+  color: var(--colorLetter1);
+  background-image: linear-gradient(var(--colorTitle), var(--colorFooter));
+  padding: .5em 1.3em 3em 3em;
+  order: -2;
+  border-top: .1em solid var(--colorNav);
+}
+.h3{
+  text-align: center;
+  padding: .5em;
+}
+.hr{
+  color:currentColor;
+}
+
+.h4{
+  padding-top: 1em;
+}
+
+ol{
+  padding-top: .5em;
+}
+
+li{
+  padding: .2em 0;
+}
+
+li:hover{
+  background-color: var(--colorNav);
+  box-shadow: 0 0 .3em .3em var(--colorNav);
+}
+
+.subnavs{
+  padding-left: 1em;
+}
+
+main{
+  color: var(--colorLetter2);
+  background-image: linear-gradient(var(--colorMain1) 70%, var(--colorMain2) 95%);
+  padding: 3em 1em 1em 1em;
+  box-shadow: 0 0 .5rem 0 var(--colorTitle) inset;
+  flex-grow: 1;
+  text-align: center;
+  order: -1;
+  font-size: xx-large;
+}
+
+footer{
+  color:var(--colorLetter3);
+  background-color: var(--colorFooter);
+  border-top: .5rem solid var(--colorTitle);
+  box-shadow: 0 .5rem 1rem 0 var(--colorTitle) inset;
+  padding: 1rem;
+  min-width: 100vw;
+  order: 1;
+}
+
+footer > a{
+  display: block;
+  width: 70vw;
+}
+
+a{
+  text-decoration: none;
+}
+
+.subnavs{
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 500px){
+  div{
+    flex-direction: column;
+  }
+  header{
+    font-size: small;
+  }
+  nav{
+    max-width: 100%;
+    order: initial;
+  }
+  main{
+    padding: 1em 1.5em;
+    font-size: large;
+  }
+  li:active{
+    background-color: var(--colorNav);
+    box-shadow: 0 0 .3em .3em var(--colorNav);
+  }
+}

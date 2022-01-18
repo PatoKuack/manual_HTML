@@ -1,0 +1,157 @@
+<html style="background-color: khaki">
+  <head>
+    <!-- No guardar cache en navegadores -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- ------------------- -->
+    <title>Tablas</title>
+  </head>
+  <body>
+    <h1>Tablas</h1>
+    <p>
+      Las tablas sirven para tabular contenido es decir llenarlas de datos, mostrar valores, etc.<br>
+      La etiqueta <b>table</b> con su inicialización y finalización se utiliza para crear tablas de contenidos, similar a la estructura de las hojas de cálculo.<br>
+      La etiqueta <b>tr</b> con su inicialización y finalización se utiliza para crear las filas.<br>
+      La etiqueta <b>th</b> con su inicialización y finalización se utiliza para crear la cabecera de la tabla, es decir las filas principales de cada columna, se coloca dentro de los "tr".<br>
+      La etiqueta <b>td</b> con su inicialización y finalización se utiliza para crear las columnas, se coloca dentro de los "tr".<br>
+      Con el atributo <b>border=1</b> dentro de la etiqueta "table" indica que la tabla tendrá un borde de 1cm de ancho, aunque no es recomendable usarlo porque el diseño debe de hacerlo CSS.<br>
+      La etiqueta <b>thead</b> con su inicialización y finalización se utiliza para marcar la semántica de la tabla (entidades), los "tr" y "th" van dentro de estas etiquetas.<br>
+      La etiqueta <b>tbody</b> con su inicialización y finalización se utiliza para marcar la semántica de la tabla (atributos de las entidades), los "tr" y "td" van dentro de estas etiquetas.<br>
+      La etiqueta <b>tfoot</b> con su inicialización y finalización se utiliza para marcar la semántica de la tabla (pie de tabla), los "tr" y "td" van dentro de estas etiquetas. Aquí se colocan las conclusiones de las columnas, como un total de facturación de una cuenta. Siempre se auto coloca al final de las filas.<br>
+      La etiqueta <b>caption</b> con su inicialización y finalización se utiliza para colocar el título de la tabla (va dentro de la etiqueta "table"). Siempre se auto coloca arriba de la tabla, aunque la coloquemos hasta el final.<br>
+      <h2>Agrupación de filas y columnas</h2>
+      El atributo <b>colspan=2</b> se utiliza para que una celda ocupe determinados espacios de columnas, en este caso una celada sería del tamaño de dos celdas en lo largo (ejemplo: td colspan=2>).<br>
+      El atributo <b>rowspan=2</b> se utiliza para que una celda ocupe determinados espacios de filas, en este caso una celada sería del tamaño de dos celdas en lo alto (ejemplo: td rowspan=2>).<br>
+      (Si no crean su función "rowspan" y "colspan" se deberán crear más filas o columnas)<br><br>
+      Para colorear toda una fila, solo se una un "backgroun" o "class" en las "tr" pero para colorear solo una columna...<br>
+      La etiqueta <b>colgroup</b> con su inicialización y finalización permite seleccionar grupos de columnas completas.<br>
+      Dentro de esa etiqueta se utiliza la etiqueta <b>col</b> solo con su inicialización se utiliza para indicar cada columna (si se tiene una tabla de 3 columnas se tendrán q poner 3 etiquetas col).<br>
+      Se puede también colocar únicamente un "col" indicando con un atributo "span=<i><b>N</b></i>" que la agrupación se hará para la <i><b>ENECIMA</b></i> columna, si se hace esto se usará otro "col" para indicar con un atributo "style=background:" o "class" el color de la columna.<br>
+      Con CSS se puede utilizar esta etiqueta para dar formato a determinado grupo de celdas.<br>
+      El atributo <b>class="col-1"</b> se utiliza para CSS indicando que esa columna se podrá mandar a llamar como "col-1" (se tendría q colocar un "col" por columna ej. col class="col-1">).<br>
+    </p>
+    <table border=1>
+      <caption>Materias</caption>
+      <thead>
+        <tr>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan=2>Arduino</td>
+          <td>Ejercicio</td>
+          <td colspan=2>Diseño web</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>S embebidos</td>
+          <td>Admón. Estrat/Tecno</td>
+          <td rowspan=2>Seminario</td>
+          <td>S embebidos</td>
+          <td>Admón. Estrat/Tecno</td>
+        </tr>
+        <tr>
+          <td>Inglés</td>
+          <td>Inglés</td>
+          <td>Inglés</td>
+          <td>Inglés</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>3 actividades</td>
+          <td>3 actividades</td>
+          <td>2 actividades</td>
+          <td>3 actividades</td>
+          <td>3 actividades</td>
+        </tr>
+      </tfoot>
+    </table>
+    <table border=1>
+      <caption>Tabla con agrupación de columnas 1</caption>
+      <colgroup>
+        <col style="background: yellow">
+        <col style="background: pink">
+        <col style="background: limegreen">
+        <col style="background: rgb(212, 191, 255)">
+        <col style="background: aquamarine">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan=2>Arduino</td>
+          <td>Ejercicio</td>
+          <td colspan=2>Diseño web</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>S embebidos</td>
+          <td>Admón. Estrat/Tecno</td>
+          <td rowspan=2>Seminario</td>
+          <td>S embebidos</td>
+          <td>Admón. Estrat/Tecno</td>
+        </tr>
+        <tr>
+          <td>Inglés</td>
+          <td>Inglés</td>
+          <td>Inglés</td>
+          <td>Inglés</td>
+        </tr>
+      </tbody>
+    </table>
+    <table border=1>
+      <caption>Tabla con agrupación de columnas 2</caption>
+      <colgroup>
+        <col span=1>
+        <col style="background: cyan">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan=2>Arduino</td>
+          <td>Ejercicio</td>
+          <td colspan=2>Diseño web</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>S embebidos</td>
+          <td>Admón. Estrat/Tecno</td>
+          <td rowspan=2>Seminario</td>
+          <td>S embebidos</td>
+          <td>Admón. Estrat/Tecno</td>
+        </tr>
+        <tr>
+          <td>Inglés</td>
+          <td>Inglés</td>
+          <td>Inglés</td>
+          <td>Inglés</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

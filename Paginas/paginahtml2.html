@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- No guardar cache en navegadores -->
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<!-- ------------------- -->
+		<title>Etiquetas</title>
+	</head>
+	<body>
+		<div style="color: darkslateblue; background: cornsilk">
+			<h1>Etiquetas</h1>
+			<p>
+				<b>Etiquetas</b>: son la representación básica de la información en un documento html. Sirven para crear y organizar el contenido.<br>
+				Van entre "mayor que" y "menor que", la mayoría tienen una etiqueta de inicialización y otra de finalización entre las cuales se coloca un contenido,<br>
+				<img src="../Imahenes/AnatomiaHTML.jpg" alt="Ejemplo de etiqueta con apertura y cierre" style="width: 80%;"><br>
+				aunque hay otras con solo inicialización llamadas self closing o etiqueta vacía.<br>
+				Como buena práctica se suele colocar un slash al final de estas etiquetas sin cierre (ejemplo img="..." />)<br>
+				Las etiquetas no son case sensitive, o sea que no importa si se escriben en mayúsculas o minúsculas.<br>
+				<b>Atributos</b>: son los textos que acompañan a las etiquetas, estas se colocan dentro de la etiqueta de inicialización justo antes del "mayor que" (<b>></b>),<br>son case sensitive o sensibles a reconocimiento entre mayúsculas y minúsculas.<br>
+				<b>Elementos de bloque</b>: son etiquetas cuyo contenido se coloca entre su inicialización y finalización.<br>
+				<b>Elementos de lista</b>: son etiquetas que se utilizan adentro de los elementos de bloque en las líneas del contenido.
+			</p>
+			<p>
+				<h2>Etiquetas básicas</h2>
+				La etiqueta <b>!DOCTYPE html</b> le indica al navegador el tipo de documento que se está mostrando (es una etiqueta que se coloca al inicio del código y no tiene etiqueta de cierre).<br>
+				La etiqueta <b>html</b> es la que envuelve todo el documento.<br>
+				El atributo <b>lang="es"</b> de la etiqueta <b>html</b> le indica al navegador que nuestra página está dirigida a personas que hablen español (en inglés sería <b>lang="en"</b>).<br>
+				En <b>head</b> se escribe información para el navegador que no se visualiza en la página (metadatos), contiene sub etiquetas que describen al documento o incluyen recursos adicionales.<br>
+				La etiqueta <b>meta charset="UFT-8"</b> se coloca dentro de <b>head</b> y es un codificador de caracteres unicode para que la página soporte simbología especial como tildes (no tiene etiqueta de cierre).<br>
+				La etiqueta <b>meta name="viewport" content="width=device-width, initial-scale=1.0"</b> se coloca dentro de <b>head</b> y adapta la página a la pantalla de tu móvil, tablet o pc. Se usa mucho para los diseños responsives y ayuda en el SEO.<br>
+				En <b>body</b> se escribe el contenido de la página.<br>
+				Con el atajo 'html:5' se nos completa automáticamente la estructura básica de la página web.
+			</p><hr>
+			<h3>Etiquetas en HTML:</h3>
+			<p>
+				La etiqueta <b>br</b> (breaking  rule) es self closing y coloca un salto de línea.<br>
+				<u>La etiqueta <b>u</b> se inicializa y se finaliza, nos permite subrayar texto (underline).</u><br>
+				<i>La etiqueta <b>i</b> se inicializa y se finaliza, nos permite usar texto en cursiva (itálica).</i><br>
+				Las etiquetas <b>b</b> y <b>strong</b> visualmente son iguales, se inicializan y se finalizan, pero...<br/>
+				<b>b</b> solo convierte texto en negritas (bold), en cambio,<br>
+				<b>strong</b> hace énfasis en el texto para que el usuario pueda buscar en mi buscador web (no abusar de esta etiqueta)<br>
+				<span style="color: black; background: cyan"><b>span</b> con su inicialización y finalización se puede cambiar el color de fondo y del texto especificándolos dentro de la apertura<br>
+				(style="color: <i>color de texto</i>; background: <i>color de fondo</i>"), *todo el código en minúsculas*</span><br>
+				<b>div</b> con su inicialización y finalización hace lo mismo que span pero con párrafos completos, se puede usar solo en títulos, en partes de párrafos o párrafos completos.<br>
+				<cite><b>cite</b> con su inicialización y finalización nos permite agregar un autor de alguna etiqueta, aparece en cursiva, se inicializa y finaliza</cite><br>
+				<b>hr</b> (horizontal rule) <u>no se finaliza</u>, solo se inicializa donde se desee agregar una separación entre elementos de la página, indica un cambio de tema, sirven para dar estructura a la página.<br>
+				<b>wbr</b> (word breaking rule) <u>no se finaliza</u>, solo se inicializa colocándolo entre una palabra. Representa una oportunidad de quiebre de línea. <br>
+				Puede ser muy útil en situaciones donde la comprensión de la información puede verse afectada por un quiebre de línea mal ubicado. (ejemplo: i=0< wbr > a=1< wbr > x=3)<br>
+				<code><b>code</b> con su inicialización y finalización se utiliza para indicar que entre estas etiquetas hay un código.</code><br>
+				<small><b>small</b> con su inicialización y finalización se utiliza para textos poco importantes</small><br>
+				<b>sub</b> (de subíndice) con su inicialización y finalización nos permite colocar subíndices, por ejemplo H<sub>2</sub>O<br>
+				<b>sup</b> (de superíndice) con su inicialización y finalización nos permite colocar superíndices, por ejemplo 2<sup>0</sup>=1.<br>
+				<em><b>em</b> (de emphasis) con su inicialización y finalización se usa para textos importantes.</em><br>
+				<blockquote><b>blockquote</b> (bloque de cita) con su inicialización y finalización indica que el texto es una cita textual hacia algún artículo.</blockquote>
+				<pre><b>pre</b> (de preformat) 
+    el texto incrustado entre la inicialización y finalización de esa etiqueta
+		respeta los saltos de línea, espacios y sangrías</pre>
+		<hr>
+				<blockquote><i>Referencias de colores:<br>
+				https://html-color-codes.info<br>
+				http://www.manualweb.net/html/colores-html/</i><br><br>
+				<i>Referencias de etiquetas:<br>
+				https://allthetags.com/<br>
+				http://html5doctor.com/</i></blockquote>
+			</p>
+			<hr>
+		</div>
+	</body>
+</html>

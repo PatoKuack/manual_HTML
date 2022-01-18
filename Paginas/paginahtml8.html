@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" style="background-color: khaki">
+<head>
+  <!-- No guardar cache en navegadores -->
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <!-- ------------------- -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios</title>
+</head>
+  <body>
+    <h1>Formularios</h1>
+    <p>
+      El formulario es la parte del sitio web en el que el usuario puede interactuar <br>
+      escribiendo texto o activando una acción, después se puede procesar la información y se dará una respuesta.<br>
+      Se crea con la etiqueta <b>form</b> con su inicialización y finalización. <br>
+      Dentro de la etiqueta de inicialización se colocan atributos como por ejemplo: <br>
+      El atributo <b>action</b> recibe como valor una URL que se encarga de procesar los datos que contenga el formulario, si no se coloca un valor,<br>
+      se recarga la página actual y si se coloca un '#' no se recarga la página y hace el efecto de enviar el formulario (ejemplo: action="datos.php").<br>
+      Estos datos son mandados al servidor el cual evalúa que sean seguros, los procesa y valida.<br>
+      El atributo <b>method</b> complementa el metodo "action" y permite decidir por que metodo se puede enviar la información (POST o GET) (ejemplo: method="GET").<br>
+      <span style="color: black; background:rgb(180, 240, 240)">^ Este último atributo es de una programación más avanzada ^</span><br>
+      El atributo <b>autocomplete="on|off"</b> permite autocompletar el formulario con valores guardados (ejemplo: form autocomplete="on">)
+    </p>
+    <p>
+      Dentro del formulario se colocan textos y campos donde se ingresan valores, <br>los campos se crean por medio de la etiqueta <b>input</b> (entradas) la cual solo se inicializa. <br>
+      Se aconseja separar los input encerrando cada uno en etiquetas <b>div</b><br>
+      Dentro de esta etiqueta "input" se pueden colocar atributos para cada campo, por ejemplo: <br><br>
+      El atributo <b>type</b> diferencia el tipo de entrada que se desea (ejemplo: type="text").<br>
+      El atributo "type" puede tener muchos valores:<br>
+      un valor <b>text</b> esta por default (puede colocarse o no) y sirve para colocar un texto,<br>
+      un valor <b>number</b> permite colocar números en el campo y con un gadget incluido permite aumentar o disminuir la cantidad,<br>
+      un valor <b>tel</b> simplemente sirve para colocar un número telefónico<br>
+      un valor <b>date</b> permite colocar una fecha y con un gadget incluido permite seleccionar un día del calendario<br>
+      un valor <b>password</b> impide ver alguna contraseña que se ingrese aunque no es del todo seguro (es necesario más validaciones de seguridad para que sea seguro),<br>
+      un valor <b>e-mail</b> valida si el texto ingresado es un posible mail o no, <br>
+      un valor <b>checkbox</b> crea casillas cuadradas para marcarlas como opciones, permite marcar más de las casillas vinculadas,<br>
+      un valor <b>radio</b> crea casillas redondas para marcarlas como opción, permite marcar solo una de las casillas vinculadas,<br>
+      se debe agregar el atributo "name" en estos dos valores de casillas usando el mismo nombre en las casillas vinculadas,<br>
+      En estos dos atributos (checkbox y radio) se puede agregar el atributo <b>checked</b> para que la casilla esté seleccionada por default.<br>
+      un valor <b>button</b> crea un botón y con ayuda de un atributo extra "value=" en el mismo input, coloca un texto dentro del botón,<br>
+      éste atributo realiza una acción con javaScript (ejemplo: type="button" value="Guardar"),<br>
+      un valor <b>submit</b> crea un botón con un texto por defecto (Submit) que se puede modificar con el atributo "value=",<br>
+      sirve para crear un botón que manda los datos del formulario a algún lugar especificado en la etiqueta "form",<br>
+      un valor <b>color</b> permite seleccionar un color por medio de una casilla de colores desplegables,<br>
+      un valor <b>range</b> permite seleccionar un rango por medio de una barra movible,<br>
+      con los atributos extras <b>min=" "</b> y <b>max=" "</b> se puede modificar el deslizamiento de la barra,<br>
+      con el atributo extra <b>step="2"</b> se puede hacer que el deslizamiento de las paradas de la barra sean de 2 en 2 en este caso,<br>
+      con el atributo "value" en este input se puede inicializar el rango en un valor especifico.<br><br>
+      Aparte del atributo type, se pueden utilizan otros como el atributo <b>contenteditable</b> que permite editar el texto directamente<br/> 
+      por el usuario en la página web. <span style=" background:rgb(180, 240, 240)">Este atributo puede utilizarse en cualquier elemento</span> como un &#60;p contenteditable&#62;<br/>
+      El atributo <b>value</b> coloca un texto por default dentro del campo (ejemplo: value="@hotmail.com").<br>
+      El atributo <b>placeholder</b> hace lo mismo que el atributo "value", solo que el texto dentro del campo <br>desaparece al querer escribir en el campo (ejemplo: placeholder="Escribe tu nombre").<br>
+      (Desventaja) Si nuestra página se traduce a otro idioma, el texto del atributo "placeholder" aparecerán en su idioma original<br>
+      El atributo <b>size</b> permite modificar el ancho del campo pero eso es mejor manipularlo con CSS (ejemplo size="10").<br>
+      El atributo <b>maxlength</b> limita la cantidad de caracteres que se pueden ingresar al campo (ejemplo maxlength="5").<br>
+      El atributo <b>name=""</b> se debe usar en cada elemento de los formularios porque establece al servidor<br>
+      que valor estamos pidiendo, es recomendable que se nombren los campos en inglés <br>
+      (ejemplo: name="email" es como decir en el programa que en éste caso el input tiene el nombre de "email").<br>
+      El atributo "name" es importante al procesar los datos.<br>
+      El atributo <b>id</b> crea un identificador para el elemento donde de usa, esto se usa junto con otras etiquetas (ejemplo: id="nombre").<br>
+      También se puede usar el atributo <b>class</b> para usarlos con JavaScript (ejemplo: clas="class-name").<br>
+      El atributo <b>required</b> sirve para indicar que un campo debe ser llenado, es decir que no puede tener un valor nulo, este atributo se coloca solo (ejemplo: &#60;input type="checkbox" required&#62;Acepto términos).<br>
+      El atributo <b>readonly</b> niega la modificación de un campo por parte del usuario, este atributo se coloca solo (ejemplo: &#60;input type="text" readonly&#62;).<br>
+      El atributo disable desactiva un campo, algunos navegadores aplican "readonly" a los campos con "disable", este atributo se coloca solo (ejemplo: &#60;input type="text" disable&#62;).<br/>
+      El atributo <b>pattern=" "</b> sirve para las expresiones regulares que es un tema muy extenso y sirven en este caso para especificar la validación de un dato introducido como que lleve .com o que contengan determinado numero de letras y determinado numero de numeros.
+    </p>
+    <p>
+      La etiqueta <b>textarea</b> con su inicialización y finalización, coloca un campo grande para escribir un texto mas amplio.<br>
+      Se pueden especificar sus detalles agregando los atributos <b>name=""</b>, <b>id=""</b>, <b>cols=""</b>, <b>rows=""</b> o <b>placeholder=""</b><br>
+      "cols" y "rows" definen cuantas columnas y filas puede contener el cuadro de texto aunque eso se puede modificar con CSS.
+    </p>
+    <p>
+      Los textos de los formularios que están afuera de los campos pueden ser creados dentro de etiquetas <b>label</b><br>
+      La etiqueta <b>label</b> con su inicialización y finalización nos permite vincular texto a un "input".<br>
+      Dentro de ésta etiqueta se coloca el atributo <b>for</b> colocándole de valor el "id" del "input", <br>
+      así al dar clic en el texto se podrá escribir en el campo (ejemplo: for="id del input"). <br>
+      También se puede colocar un "input" dentro de la etiqueta "label" para vincularlos sin necesidad de un "id" ni "for".
+    </p>
+    <p>
+      La etiqueta <b>select</b> con su inicialización y su finalización nos permite hacer listas desplegables.<br>
+      Dentro de esta etiqueta, las etiquetas <b>option</b> con su inicialización y finalización permiten colocar las opciones de la lista (un option por opción)<br>
+      colocándoles un atributo "value" (ejemplo: option value="Nombre del campo">Nombre visible).<br>
+      También se le puede anexar el atributo <b>selected</b> para que la opción en ella esté seleccionada por default.<br>
+      Con la etiqueta <b>optgroup</b> con su inicialización y finalización permite agrupar las opciones (ejemplo: optgroup label="aficiones">)
+    </p>
+    <p>
+      La etiqueta <b>fieldset</b> permite crear listados de opciones, al empezar a escribir en el campo se buscan las opciones posibles de acuerdo a lo que está en el campo<br>
+      dentro de esta etiqueta se agrega la etiqueta "input" de tipo <b>type="list"</b><br>
+      con el atributo <b>list="id del datalist"</b> se vincula la lista de opciones,<br>
+      dentro de este input se agrega la etiqueta <b>datalist</b> que es donde van a ir las opciones<br>
+      es importante agregarle un atributo <b>id=""</b> para vincularlo al "imput"
+      dentro de esta etiqueta "datalist" van las opciones con la etiqueta "option"<br>
+      <span style="color: black; background:rgb(255, 210, 184)">^ La lista de opciones (fieldset) actualmente (octubre 2020) no está bien habilitada en FIREFOX ^</span><br>
+      *<br/>
+      También, la etiqueta <b>fieldset</b> con su inicialización y su finalización agrupa los campos del formulario encerrándolos en un margen.<br>
+      La etiqueta <b>legend</b> con su inicialización y su finalización coloca una titulación de la agrupación (ejemplo: legend>Datos personales).<br>
+    </p>
+    <p>
+      La etiqueta <b>button</b> con su inicialización y finalización crea un botón, dentro de esta etiqueta se coloca el nombre visual del botón<br>
+      y por default éste elemento tiene como atributo type="submit",
+      con el  atributo onclick="funcin()" se puede agregar una URL<br>
+      o una función de JavaScript para que se redireccione o ejecute respectivamente cuando se le da clic al botón<br>
+      con la etiqueta <b>formaction="<u><i>URL</i></u>"</b> se especifica donde mandar la información del formulario,<br>
+      y con el atributo <b>form="<u><i>form_id</i></u>"</b> se especifica el formulario del que se quiere mandar los datos<br>
+      (en caso de que haya más de un formulario en la página) con ayuda del <b>id</b> de uno de los formularios de la página.
+    </p>
+    <form action="inventado.html">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <div>
+          <label >
+            Ingrese su nombre: 
+            <input type="text" placeholder="Nombre de pila" maxlength="20" name="nombre" id="nombrito" required>
+          </label>
+        </div>
+        <div>
+        <label for="nombrito">Ingrese su e-mail: </label>
+        <input type="e-mail" value="@hotmail.com" maxlength="35" name="mail">
+        </div>
+        <div>
+          <input type="radio" name="gender" id="sexo" checked>Hombre
+          <input type="radio" name="gender" id="sexo">Mujer
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Datos de compra</legend>
+        <div>
+          <label>
+            ¿Que desea comprar?
+            <select name="buy" id="buy">
+              <optgroup label="Cosas">
+                <option value="Juguete">Juguete</option>
+                <option value="Ropa">Ropa</option>
+              </optgroup>
+              <optgroup label="Comida">
+                <option value="Alimentos">Alimentos</option>
+                <option value="Bebidas" selected>Bebidas</option>
+              </optgroup>
+            </select>
+          </label>
+          <label for="quantity">cantidad</label>
+          <input type="number" id="quantity" name="quantity" value="1">
+          <fieldset>
+            <label for="quantity">¿Qué fruta te gusta más que comience con MA?</label>
+            <input type="list" list="lista">
+            <datalist id="lista">
+              <option value="Mango">Mango</option>
+              <option value="Manzana">Manzana</option>
+              <option value="Mandarina">Mandarina</option>
+              <option value="Maracuya">Maracuyá</option>
+              <option value="Mamey">Mamey</option>
+            </datalist>
+          </fieldset>
+        </div>
+      </fieldset>
+      <div>
+        <input type="button" value="Guardar" name="save">
+        <button type="button">Guardar</button>
+      </div>
+    </form>
+    <hr>
+    <h3>Formularios con IFrames</h3>
+    También se pueden colocar formularios con la ayuda de <b>IFrames</b>, ejemplo:<br/>
+    Se puede obtner un formulario facilmente con la página <a target="_blank" href="https://developers.facebook.com/">Facebook for developers</a>, nos dirigimos a la pestaña <b>Docs</b> o <b>Documentos</b> y de ahí al bloque de <b>Integraciones sociales</b>, en este bloque buscamos y accedemos a la opción <b>Social plugins</b> y de ahí se selecciona la opción que nos interese, en este caso será la pestaña <b>Plugin de páginas</b>, en esa opción se diseña el IFrame y una vez diseñada se presiona el botón <b>Obtener código</b> y se copia el código del IFrame que se encuentra en la segunda pestaña de la ventana emergente. Se pega el IFrame en donde se desee del código HTML, se suele colocar dentro de una etiqueta <b>div</b> y lo q hará es pedir al usuario escribir un texto y mandarnoslo a nuestro inbox de Facebbok.
+  </body>
+</html>

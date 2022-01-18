@@ -1,0 +1,61 @@
+<html style="background-color: khaki">
+  <head>
+    <!-- No guardar cache en navegadores -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- ------------------- -->
+    <title>Metadatos</title>
+  </head>
+  <body>
+    <h1>Metadatos</h1>
+    <p>
+      Es información que le damos al navegador web o a los buscadores para que identifiquen información. Nos sirven para darle una descripción de nuestra página web al navegador y nuestra página la puedan posicionar dependiendo de lo que busquen los usuarios.<br>
+      Se usan con la etiqueta <b>meta</b>, no necesita finalización y se coloca en la sección <b>head</b>.<br>
+      Hay varios metas como:<br>
+    </p>
+    <p>
+      <h2>Description.</h2>
+      Con el atributo <b>name</b> se define el tipo de meta que vamos a utilizar que en este caso sería el meta "description".<br>
+      En el atributo <b>content</b> colocamos la descripción de nuestro sitio web, ésta se muestra en el navegador abajo del título (se recomienda que el fragmento de texto no rebase los 150 o 170 caracteres).<br>
+      (ejemplo: meta name="description" content="descripción de la página"/>).
+    </p>
+    <p>
+      <h2>Keywords.</h2>
+      Con el atributo <b>name</b> se define el tipo de meta que vamos a utilizar que en este caso sería el meta "keywords".<br>
+      En el atributo <b>content</b> colocamos palabras claves de nuestro sitio web separadas por comas(estos metadatos ya no los toma en cuenta Google para el buscador, sin embargo otros buscadores si los toman en cuenta por lo que no está de más agregarlos).<br>
+      (ejemplo: meta name="keywords" content="curso, básico, html"/>).<br><br>
+    </p>
+    <p>
+      <h2>charset</h2>
+      La etiqueta <b>meta charset="UFT-8"</b> se coloca dentro de <b>head</b> y es un codificador de caracteres unicode para que la página soporte simbología especial como tildes.<br>
+    </p>
+    <p id="enlazar">
+      <h3>Enlazar archivos CSS o JS.</h3>
+      Para enlazar una hoja de estilo CSS se usa la etiqueta <b>link</b> y no necesita etiqueta de finalización (link rel= ... .css>), va en la sección <b>head</b>.<br>
+      La etiqueta <b>link</b> permite traer recursos externos a la página web.<br>
+      Los atributos de ésta etiqueta son:<br>
+      <b>rel="icon" href="ruta de la imagen"</b> indican al navegador que coloque en el icono de la página la imagen de la ruta especificada.<br>
+      <b>rel="stylesheet" href="ruta del documento CSS"</b> indica que se aplicará el estilo CSS de la ruta especificada.<br>
+      <b>href="estilos/estilo1.css"</b> indica la dirección de la hoja de estilos, se puede poner una dirección absoluta (https//:www...) o una relativa.<br>
+      (no recomendado) Si se desea crear un CSS rápido se puede usar la etiqueta <b>style</b> con su inicialización y finalización en la sección <i>head</i>, adentro de estas van códigos como <b>background: green;</b> o <b>color: black;</b><br>
+      <i>A esta etiqueta se le agregaba antes el atributo </i><b>type="text/css"</b><i> para indicar su tipo de contenido, pero ahora ya no es necesario sin embargo se pueden encontrar en códigos viejos.</i><br><br>
+      Para enlazar una hoja de tipo java script se usa la etiqueta <b>src="javascript.js"</b> al final de la sección <i>head</i> para que se cargue todo el diseño y después la interacción de la página.<br>
+      Si se desea crear un CSS rápido se puede usar la etiqueta <b>script</b> con su inicialización y finalización al final de la sección <i>body</i>, dentro de esta etiqueta va escrito el código javascript.<br>
+      <i>A esta etiqueta se le agregaba antes el atributo </i><b>type="text/javascript"</b><i> para indicar su tipo de contenido, pero ahora ya no es necesario sin embargo se pueden encontrar en códigos viejos.</i>
+    </p>
+    <p class="enlazar">
+      <h3>Cache.</h3>
+      Cuando se carga una página en el navegador de un usuario, la página se guarda en la memoria cache evitando que el navegador cargue futuras actualizaciones de la página, por esto se utilizan los siguientes metadatos:<br/>
+      &#60;meta http-equiv="cache-control" content="no-cache"&#62;
+      &#60;meta http-equiv="Pragma" content="no-cache"&#62;
+      &#60;meta http-equiv="expires" content="0"&#62;
+    </p>
+    <footer>
+      <p>
+        <a href="http://www.i18nguy.com/markup/metatags.html" target="_blank" rel="noopener noreferrer">Descripción de algunos metas.</a><br/>
+        <a href="https://docs.microsoft.com/es-es/troubleshoot/browsers/how-to-prevent-caching" target="_blank" rel="noopener noreferrer">Evitar almacenamiento en cache.</a>
+      </p>
+    </footer>
+  </body>
+</html>

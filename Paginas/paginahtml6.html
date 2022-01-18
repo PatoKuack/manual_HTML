@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" style="background-color: khaki">
+  <head>
+    <!-- No guardar cache en navegadores -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- ------------------- -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video y audio</title>
+  </head>
+  <body>
+    <p>
+      <h2>Videos</h2>
+      Con la etiqueta <b>video</b> se pueden insertar videos colocando su inicialización y finalización.<br>
+      Con el atributo <b>src=" "</b> se coloca dentro de las comillas la ruta del video que se quiera colocar.<br>
+      Con el atributo <b>width=" "</b> se coloca el ancho del video y automáticamente se adapta el largo.<br>
+      Con el atributo <b>controls</b> se activa el formato video para poder reproducirlo, éste atributo es booleano y no necesita parámetros, es decir únicamente se coloca el atributo a secas.<br>
+      Con el atributo <b>poster=" "</b> se coloca entre las comillas la ruta de la imagen que se quiere mostrar a primera vista en el video.<br>
+      Con el atributo <b>autoplay</b> se reproduce el video automáticamente, los navegadores bloquean la reproducción automática por malas prácticas en marketing, sin embargo después del primer video los siguientes se reproducirán automáticamente, este atributo al igual que "controls es booleano y no tiene parámetros.<br>
+      Con el atributo <b>muted</b> los videos que se reproduzcan automáticamente se reproducirán sin sonido.<br>
+      <h2>Audios</h2>
+      Con la etiqueta <b>audio</b> se pueden insertar audios colocando su inicialización y finalización.<br>
+      Se le pueden incluir todos los atributos de la etiqueta "video" excepto el atributo "poster".<br>
+      <h2>Recomendaciones</h2>
+      Es recomendable que los audios y videos vengan de fuentes externas especializadas en audio y video ya que esas fuentes codifican sus videos para que pesen poco y se vean bien, si no se sabe codificar bien un video solo se conseguirá saturar la página.<br>
+      Si se inserta un video a la página de una fuente interna se tiene que verificar que sea en formato <b>mp4 y codec h264</b>, se puede usar otro formato mp y otro codec (codificación y decodificación) de videos pero requiere más conocimientos en este campo.<br>
+      <h2>IFRAME</h2>
+      La etiqueta <b>iframe</b> se utiliza para insertar contenidos de otras fuentes externas como Instagram (fotos), YouTube (videos), Spotify (música), Wufoo o Jotform (formularios).<br/>
+      <a href="https://desarrolloweb.com/articulos/etiqueta-iframe.html">Descripción más detallada del IFrame</a>
+    </p>
+    <img src="../Imahenes/Imframe1.jpg" alt="obtener Iframe" title="Paso 1" height="300"><br>
+    <img src="../Imahenes/Imframe2.jpg" alt="obtener Iframe" title="Paso 2" height="300"><br>
+    <img src="../Imahenes/Imframe3.jpg" alt="obtener Iframe" title="Paso 3" height="300">
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MgLGKmrsBX8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </body>
+</html>

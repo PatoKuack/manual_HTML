@@ -1,0 +1,116 @@
+<html style="background-color: khaki">
+  <head>
+    <!-- No guardar cache en navegadores -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- ------------------- -->
+    <title>Listas</title>
+  </head>
+  <body>
+    <h1>Listas</h1>
+    <p>
+      <h2>Ordenadas:</h2>
+      Se crean con las etiquetas <b>ol</b> (de ordered) con su inicialización y finalización, dentro de esta etiqueta se coloca la etiqueta <b>li</b> (de list item)<br> con su inicialización y finalización para colocar cada uno de los items. Estas listas tiene una numeración.<br>
+      Dentro de cada etiqueta <b>ol</b> se pueden colocar otras <b>ol</b> para crear sub listas.
+    <hr/>
+    <ol>
+      <li>Item</li>
+      <li>Item</li>
+    </ol>
+    <hr/>
+    <ol>
+      <li>Item</li>
+      <ol>
+        <li>Sub-item</li>
+        <ol>
+          <li>Sub-sub-item</li>
+        </ol>
+      </ol>
+      <li>Item</li>
+    </ol>
+    <hr/>
+      Se les pueden agregar atributos a las listas como:<br/>
+      &#60;ol <b>reversed</b>&#62; este atributo invierte el orden numerico de las listas ordenadas.<br/>
+      &#60;ol <b>start="#"</b>&#62; este atributo hace que la lista ordenada comience en el numero que se le asigna.<br/>
+      &#60;li <b>value="#"</b>&#62; este atributo del item hijo (de la lista ordenada) hace que el item empiece desde el numero especificado y todos los items que le preceden continual con la numeración de esta alteración.
+      <hr/>
+      <ol reversed>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+      <hr/>
+      <ol start="9">
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+      <hr/>
+      <ol>
+        <li>item</li>
+        <li>item</li>
+        <li value="6">item</li>
+        <li>item</li>
+        <li>item</li>
+      </ol>
+      <hr/>
+    </p>
+    <p>
+      <h2>Desordenadas:</h2>
+      Se crean con las etiquetas <b>ul</b> (de unordered list) con su inicialización y finalización, dentro de esta etiqueta se crea la etiqueta <b>li</b> (de list item) <br>
+      con su inicialización y finalización para colocar cada uno de los items.<br>
+      Dentro de cada etiqueta <b>ul</b> se pueden colocar otras <b>ul</b> para crear sub listas.
+    </p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+      </ul>
+      <ul>
+        <li>Item 1</li>
+        <ul>
+          <li>Sub-item</li>
+          <ul>
+            <li>Sub-sub-item</li>
+            <ul>
+              <li>Sub-sub-sub-item</li>
+            </ul>
+          </ul>
+        </ul>
+        <li>Item 2</li>
+      </ul>
+      <p>
+        <br>Si no se especifica el tipo de lista con <b>ol</b> o <b>ul</b> se da por default la lista desordenada <b>ul</b> pero no es recomendable no especificar el tipo de lista.<br>
+        <h2>Anidadas:</h2>
+        Las listas anidadas son las combinadas <b>ol</b> y <b>ul</b>.
+      </p>
+      <li>Lista indefinida 1</li>
+      <li>Lista indefinida 2</li>
+
+      <ol>
+        <li>Item</li>
+        <ul>
+          <li>Sub-item</li>
+        </ul>
+      </ol>
+      <ul>
+        <li>Item</li>
+        <ol>
+          <li>Sub-item</li>
+        </ol>
+      </ul>
+      <p>
+        <h2>Listas de definición</h2>
+        Se crean con las etiquetas <b>dl</b> (de definition list) con su inicialización y finalización, dentro de esta etiqueta se coloca la etiqueta <b>dt</b> (de definition term)<br>
+        con su inicialización y finalización que es donde se colocan los términos, <u>afuera</u> de esta etiqueta se coloca la etiqueta <b>dd</b> (de definition description)<br>
+        con su inicialización y finalización que es donde se colocan las definiciones para los términos. Esta lista casi no es utilizada<br>
+      </p>
+      <dl>
+        <dt>CSS</dt>
+        <dt>Cascading Style Sheets o Hojas de estilo en cascada.</dt>
+        <dt>JavaScript</dt>
+        <dt>Lenguaje de programación orientado a objetos, ​ basado en prototipos, imperativo, débilmente tipado y dinámico.</dt>
+      </dl>
+
+  </body>
+</html>

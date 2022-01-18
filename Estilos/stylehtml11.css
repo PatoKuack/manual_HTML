@@ -1,0 +1,160 @@
+:root{
+  --fondo:        rgb(165, 47, 165);
+  --orillas:      rgb(219, 173, 86);
+  --relleno:      rgb(233, 190, 197);
+  --letraclara:   beige;
+  --letraoscura:  rgb(32, 32, 32);
+  --verdeA:       darkcyan;
+  --verdeB:       rgb(5, 160, 160);
+  --verdeC:       rgb(10, 180, 180);
+  --verdeD:       rgb(15, 200, 200);
+  --verdeE:       rgb(25, 220, 220);
+  --verdeF:       rgb(30, 240, 240);
+  --verdeG:       rgb(35, 255, 255);
+  --verdeH:       rgb(135, 255, 255);
+  --tamañoc:        10;
+  --tamañor:        3;
+  --tccabeza:       calc(var(--tamañoc) + 1);
+  --tc9:            calc(var(--tamañoc) - 1);
+  --tc8:            calc(var(--tamañoc) - 2);
+  --tc7:            calc(var(--tamañoc) - 3);
+  --tc6:            calc(var(--tamañoc) - 4);
+  --tc5:            calc(var(--tamañoc) - 5);
+  --tc4:            calc(var(--tamañoc) - 6);
+  --tc3:            calc(var(--tamañoc) - 7);
+  --tc2:            calc(var(--tamañoc) - 8);
+}
+
+*, *:before, *:after{box-sizing: border-box}
+
+body{
+  color: var(--letraoscura);
+  background-color: var(--fondo);
+}
+body>*{
+  background-color: var(--relleno);
+  border:           .2em double var(--orillas);
+  margin:           1em auto;
+  max-width:        50em;
+  padding:          1.5em;
+  padding-left:     2em;
+}
+
+h1{
+  text-align: center;
+}
+ol:nth-child(2){
+  padding-left: 1em;
+}
+
+p{
+  margin: 0;
+}
+
+.imagenesvisuales, ol{
+  display:        flex;
+  flex-direction: column;
+}
+.imagenesvisuales>*{
+  margin: .5em;
+}
+
+.pagweb1, .cuerpohead, .cabeza, .cuerpo, .cabecera, .principal, .seccion, [class^="division"], .enlace, .articulo, .logo, .menu, .lista{
+  display:          grid;
+}
+
+h6, .pagweb1 div{
+  padding:    .1em .3em;
+  margin:     0;
+  font-size:  1em;
+}
+
+.pagweb1{
+  grid-template-columns:  repeat(var(--tamañoc), min-content);
+  grid-template-rows:     repeat(var(--tamañor), min-content);
+  grid-gap:               .2em;
+  color:                  var(--letraclara);
+  margin-left:            auto;
+  margin-right:           auto;
+  width:                  min-content;
+}
+/* muestra de colocaciòn por start y end */
+.cabeza{
+  background-color:   var(--verdeA);
+  grid-column-start:  1;
+  grid-column-end:    var(--tccabeza);/*11*/
+  grid-row-start:     1;
+  grid-row-end:       2;
+}
+
+.cuerpohead, .cuerpo{
+  background-color:       var(--verdeA);
+  grid-column:            1 / span var(--tamañoc);
+  grid-row:               2 / span 1;
+  grid-template-columns:  repeat(var(--tc9), min-content);
+  grid-template-rows:     repeat(1, min-content);
+}
+.cuerpo, .seccion, .principal, .division, .enlace, .division2, .articulo{
+  grid-row:               1 / span 2;
+  grid-template-rows:     repeat(2, min-content);
+}
+
+.principal{
+  background-color:       var(--verdeB);
+  grid-column:            2 / span var(--tc9);
+  grid-template-columns:  repeat(var(--tc8), min-content);
+}
+
+.seccion{
+  background-color:       var(--verdeC);
+  grid-column:            2 / span var(--tc8);
+  grid-template-columns:  repeat(var(--tc7), min-content);
+}
+
+.logo{
+  background-color:       var(--verdeD);
+  grid-column:            2 / span var(--tc7);
+  grid-row:               1 / span 1;
+  grid-template-columns:  repeat(var(--tc6), min-content);
+  grid-template-rows:     repeat(1, min-content);
+  color:                  var(--letraoscura);
+}
+.menu{
+  background-color:       var(--verdeD);
+  grid-column:            2 / span var(--tc7);
+  grid-row:               2 / span 1;
+  grid-template-columns:  repeat(var(--tc6), min-content);
+  grid-template-rows:     repeat(1, min-content);
+  color:                  var(--letraoscura);
+}
+.division{
+  background-color:       var(--verdeD);
+  grid-column:            2 / span var(--tc7);
+  grid-template-columns:  repeat(var(--tc6), min-content);
+  color:                  var(--letraoscura);
+}
+
+.enlace{
+  background-color:       var(--verdeE);
+  grid-column:            2 / span var(--tc6);
+  grid-template-columns:  repeat(var(--tc5), min-content);
+}
+
+.articulo{
+  background-color:       var(--verdeF);
+  grid-column:            2 / span var(--tc5);
+  grid-template-columns:  repeat(var(--tc4), min-content);
+}
+
+.division2{
+  background-color:       var(--verdeG);
+  grid-column:            2 / span var(--tc4);
+  grid-template-columns:  repeat(var(--tc3), min-content);
+}
+
+.cont{
+  background-color:       var(--verdeH);
+  grid-column:            2 / span 1;
+  grid-row:               1 / span 1;
+  font-size:              80%;
+}

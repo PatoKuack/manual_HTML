@@ -1,0 +1,82 @@
+<html style="background-color: khaki">
+<head>
+  <!-- No guardar cache en navegadores -->
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <!-- ------------------- -->
+  <title>Imágenes</title>
+</head>
+<body>
+  <picture>
+    <!-- <source srcset="https://www.gstatic.com/webp/gallery/2.webp" type="image/webp"> -->
+    <source srcset="../Imahenes/Yugi1.jpg" media="(min-width: 800px)">
+    <source srcset="../Imahenes/Yugi2.jpg" media="(min-width: 400px)">
+    <img src="../Imahenes/Pegasus.jpg">
+  </picture>
+
+  <p>
+    <h2>Contenido embebido</h2>
+    Contenido que no es parte del documento html sino que se encuentra en una fuente externa y se inserta en el documento html.<br>
+    Existen dos tipos de imágenes:<br><br>
+    <b>Mapa de bits</b>: conjunto de pixeles que unidos forman una imagen<br>
+    .jpg .jpeg .png (los png pesan mucho)<br>
+    .gif (animaciones)<br>
+    .webp (pesa poco y soporta transparencia pero no es muy compatible con todos los navegadores)<br>
+    Otro inconveniente es que se tiene que modificar escala de la imagen para ser compatible con cada dispositivo<br>
+    <i>Se puede usar la página <b>caniuse</b> para verificar las imágenes compatibles con los navegadores</i><br><br>
+    <b>Vectoriales</b>: es código matemático, éstas se pueden escalar (aumentar tamaño) sin perder resolución.<br>
+    .svg, pesa poco, tiene buena resolución y se renderiza (es compatible) en cada dispositivo.<br><br>
+    La etiqueta para agregar imágenes es <b>img</b>, es una etiqueta sin finalización o self closing.<br>
+    Con el atributo obligatorio <b>src</b> (de source) se coloca el origen o fuente de esta imagen (ejemplo: src="ruta/nombre.jpg").<br>
+    Se puede colocar el atributo <b>alt="pequeñísima descripción de la imagen"</b> para que, si por alguna razón, el navegador no carga la imagen, aparece en su lugar la descripción.<br>
+    además de que las personas con discapacidad utilizan programas lectores los cuales leen estas descripciones y ayudan a entender mejor la página,<br>
+    también sirve para que la imagen aparezca en el navegador de google.<br>
+    Con los atributos <b>width="#" height="#"</b> (ancho y alto) se modifica el ancho y alto de la imagen.<br>
+    Las imágenes .svg sólo se pueden modificar en uno de estos dos atributos y se acoplan automáticamente para verse uniformes,<br>
+    en cambio en las demás imágenes es opcional poner solo uno de los dos atributos o los dos para modificar su proporción.<br>
+    (aunque con CSS se puede omitir estos dos atributos en HTML).<br>
+    Se pude usar el atributo <b>title="descripción"</b> para que al sobrepasar el cursor en la imagen, se visualice un cuadro de texto con la descripción colocada en <b>title</b>.<br><br>
+    En cada dispositivo las resolución de videos o imágenes es diferente, en los celulares las imágenes de 1800 pixeles se ven muy nítidas por tener disponibles en la pantalla 300 pixeles.<br> 
+    <b>devicePixelRadio</b> es la relación con los pixele reales originales de fabricante que tiene un imagen contra la cantidad de pixeles que se tiene disponible para mostrar el contenido.<br>
+    <b>Pixeles de viewport</b>: pixeles disponibles para mostrar contenido.<br>
+    <b>Pixeles reales</b>: pixeles físicos implementados por el fabricante en la pantalla.<br>
+    <b>devicePixelRadio = PixelesReales/PixelesViewport</b><br>
+    Entre más Pixeles reales que Pixeles de viewport haya se verá más nítida la imagen. <br><br> 
+    Con el atributo <b>srcset</b> se pueden colocar varias imágenes determinando el devicePixelRadio para que el navegador escoja la imagen adecuada para el dispositivo.<br>
+    ejemplo: img srcset="img/pegasuschico.png 2x, img/pegasusgrande.png x4" src="img/pegasusdefault.png"><br>
+    En este ejemplo la imagen cambiará dependiendo de cuanto devicePixelRadio soporta la pantalla del dispositivo, x2, x4 o default.
+    <br>
+    En algunos navegadores como Chrom se guarda esta configuración en la memoria cache al cargar la página por primera vez y no se modificará <br>
+    la especificación del "srcset" aunque se modifique el código. Aunque en otros navegadores como Firefox no se guarda esta modificación en la memoria cache.<br><br>
+    <br>
+    Con la etiqueta <b>picture</b> se pueden utilizar características como la etiqueta "img" pero con más opciones (solo puede haber una etiqueta picture).<br>
+    Dentro de esta etiqueta se utiliza la etiqueta <b>source</b> para colocar condiciones que se deben cumplir, al final se coloca la etiqueta "img" por si no se cumple ninguna condición "source". <br>
+    cuando alguna condición source se cumple, no se tomarán en cuenta los source consecutivos.<br>
+    Dentro de la etiqueta "source" se coloca el atributo <b>srcset=" "</b> colocando entre las comillas la ruta de una imagen.<br>
+    Dentro de la etiqueta "img" se coloca el atributo <b>src=" "</b> para indicar dentro de las comillas la ruta de la imagen<br>
+    Las condiciones de los "source" se colocan después de el atributo que indica la ruta de la imagen con el atributo <b>media=" "</b><br>
+    Se puede colocar entre las comillas <b>(min-width: 800px)</b> para indicar en este caso que el ancho mínimo para que aparezca la imagen sea de 800 pixeles (si el ancho de pantalla es de más de 800 pixeles aparece la imagen).<br>
+    El código se lee de arriba para abajo, así que es importante colocar las condiciones de más grande a más pequeños pixeles.<br>
+    (ejemplo: source srcset="..." media="...800..."<br>
+    source srcset="..." media="...400..."<br>
+    img src="...svg">)<br>
+    Se puede colocar el atributo <b>type=" "</b> en vez de "media" para indicar entre las comillas el tipo de imagen que se colocará y así el navegador si es que soporta la imagen se adaptará al ancho de la pantalla<br>
+    (ejemplo: type="image/webp">)<br>
+    Se podría colocar otro "source" con otro type si es que un navegador (por ejemplo safari que no soporta .webp) no soporta el tipo de imagen<br>
+    Entonces el condicional se saltaría al segundo "type" (ejemplo: type="image/jpg">)<br><br>
+    <blockquote>
+      <i>
+        Páginas sugeridas para imágenes gratis:<br>
+        caniuse.com (página de consulta)<br>
+        unsplash (.jpg)<br>
+        flaticon (iconos)<br>
+        iconscout (iconos)<br>
+        undraw (.svg)<br>
+        humaaans (.svg)<br>
+        https://developers.google.com/speed/webp (.webp)
+    </i>
+    </blockquote>
+  </p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+  <div style="color: white; background: black">
+    <head>
+      <!-- No guardar cache en navegadores -->
+      <meta http-equiv="cache-control" content="no-cache">
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="expires" content="0">
+      <!-- ------------------- -->
+      <title>Enlaces</title>
+      <!--
+      aqui se ponen los LINKS o SCRIPTS
+      -->
+      <link rel="shortcut icon" type="image/x-icon" href="../Imahenes/OP_bandera.ico">
+    </head>
+    <body>
+      <p>
+        <h1>Enlaces</h1>
+        <hr style="color: rgb(255, 100, 0)">
+        <a target="_blank" href="https://www.mclibre.org/consultar/htmlcss/html/html-enlaces.html#:~:text=Un%20enlace%20de%20hipertexto%20tiene,hacer%20clic%20en%20el%20enlace" title="usando _blank" style="color: cornsilk">
+          Enlaces
+        </a>:
+        son aquellos textos subrayados color azul que permite redirigir a otros sitios web al darles clic.
+        <hr style="color: rgb(255, 135, 0)"> 
+        La etiqueta <b>a</b> (de anchor = ancla) con su inicialización y finalización sirve para enlazar un texto y abrir el enlace en la pestaña actual.<br>
+        Con el atributo <b>href=" proyecto.extención "</b> se indica el link del enlace. La palabra que va a servir de enlace al momento de darle clic va dentro de la etiqueta.<br> 
+        El atributo <b>title</b> es omisible del código, éste crea un pequeño recuadro al poner el apuntador del mouse sobre la palabra enlazada.<br>
+        (ejemplo: a href="<i>URL</i>" title="<i>cuadro de texto que aparece al sobrepasar el mouse</i>"> PALABRA <).<br>
+        Existen referencias especificas para los enlaces, por ejemplo, <b>href="mailto:<i>correo@mail.com"</i></b> abre el correo del usuario que se tenga instalado en la máquina, creando automáticamente un correo colocando como destinatario el correo especificado (correo@mail.com).<br>
+        Para abrir el enlace en una pestaña nueva se usa el atributo <b>target="_blank"</b>, esté atributo es útil cuando se enlaza contenido ajeno a la de la página o a la del autor de la página<br>
+        (ejemplo: a target="_blank" href=...).
+        <hr style="color: rgb(255, 170, 0)">
+        Por cada enlace que redirecciona a una página, se le aumenta SEO  (Search Engine Optimization o posicionamiento en buscadores)<br>
+        El atributo <b>rel="nofollow"</b> evita que los enlaces que haya en la página no transmitan SEO, esto es útil en páginas donde usuarios pueden comentar y colocar enlaces como Facebook.<br> 
+        El atributo <b>rel=noreference"</b> evita que se indique al destino el origen del link, es decir si una página enlaza a otra, con éste comando la otra página no podrá saber de dónde lo enlazaron.<br> 
+        El atributo <b>rel="noopener"</b> evita la incrustación de código malicioso al abrir enlaces en nuevas pestañas, lo cual evita hakeos.<br>
+        El atributo <b>download</b> descarga el recurso en vez de abrirlo en el navegador, el archivo tiene que encontrarse en mi <u>servidor</u> para poder mandarlo descargar con éste atributo.<br>
+        (ejemplo: a href="pegasus.png" download> descargar a Pegasus)
+        <hr style="color: rgb(255, 205, 0)">
+        Las <b>rutas relativas</b> son las que direccionan a una carpeta de donde extrae un archivo (png, doc, txt, etc.).<br/>
+        Para ir a rutas relativas que están afuera de la carpeta raíz se colocan dos puntos antes de la diagonal (ejemplo: href="<b>..</b>/img/pegasus.png")<br>
+        Para ir a la carpeta raíz directamente en rutas relativas se coloca una diagonal en la ruta de href (ejemplo: href="/") generalmente en la carpeta raíz se encuentra el index que es el archivo que contiene un menú con las rutas a la mayoría de los enlaces.<br>
+        Las <b>rutas absolutas</b> son las que nunca cambiaran, las URL (sin olvidar el protocolo como <b>http://</b>) que nos direcciona a otra página ajena a nuestro proyecto.
+        <hr style="color: rgb(255, 240, 0)">
+        <b>Enlaces hash.</b><br>
+        Se coloca <b>gato (#)</b> y el <b>id</b> del título.<br> 
+        (ejemplo de enlace: a href="#cap1">cap 1)<br> 
+        (ejemplo de id a un título h2: h2 id="cap1"> Capitulo 1)<br> 
+        <b>Enlaces hash a una página externa:</b><br> 
+        Se coloca la URL y una gato seguido del nombre especifico del título de la página externa.<br>
+        (ejemplo: href="https://ed.team#comunidad") en este ejemplo se dirigiría el enlace al sitio web de edTeam al título o sección "comunidad"
+        <hr style="color: rgb(235, 255, 0)">
+      </p>
+      <h2>Links</h2>
+      <p>
+        <hr style="color: rgb(0, 255, 120)">
+        Los links se ponen entre los <b>head</b> generalmente<br/>
+        <hr style="color: rgb(0, 255, 155)">
+        Se puede mandar a llamar un <b>estilo CSS</b> mediante la etiqueta <b>link rel="stylesheet" href="ruta del archivo.css"</b> <br/>encerrada entre <> sin finalización. "stylesheet" indica que será de estilo hoja en cascada.<br/>
+        <hr style="color: rgb(0, 255, 190)">
+        Se puede enlazar archivos de tipo JavaScript con el comando <b>script src="ruta del archivo.extensión"</b> <br/>encerrada entre <b><></b> con su seguida finalización <b>/script</b>.<br>
+        En la <a target="_blank" href="paginahtml10.html#enlazar" title="Metadatos" rel="noopener" style="color: cornsilk">sección 10</a> se encuentra un poco de información adicional.
+        <hr style="color: rgb(0, 255, 225)">
+        Para agregar un <b>icono a la página</b> se escribe el comando <br/>
+        <b>link rel="shortcut icon" type="image/x-icon" href="ruta del archivo.ico"</b> encerrada entre <b>< ></b>, <br/>rel indica que será un icono y type indica el tipo de imagen que será.<br>
+        <hr style="color: rgb(5, 255, 255)">
+      </p>
+      <p>
+        Se pueden escribir etiquetas en HTML sin activar el código con unicode, ejemplo:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;&#35;60&#59;&ensp; = &#60;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;&#35;62&#59;&ensp; = &#62;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;&#35;47&#59;&ensp; = &#47;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;&#35;160&#59; = Espacio simple<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;nbsp&#59; = Espacio simple<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;ensp&#59; = Espacio doble<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;emsp&#59; = Espacio cuadruple<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&#38;nbsp&#59;&#38;nbsp&#59;&#38;nbsp&#59;&#38;nbsp&#59; = Sangria<br>
+      </p>
+      <hr style="color: rgb(5, 200, 255)">
+      <a href="https://unicode-table.com/es/" target="_blank" title="usando _blank" style="color: cornsilk">Unicode:&emsp;https://unicode-table.com/es/</a><br><br/>
+      <a href="../Imahenes/Pegasus.jpg" title="sin usar _blank" style="color: cornsilk">Ver a Pegasus</a>
+    </body>
+  </div>
+</html>
