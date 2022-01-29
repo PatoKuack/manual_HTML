@@ -14,14 +14,12 @@
   <body>
     <h1>Formularios</h1>
     <p>
-      El formulario es la parte del sitio web en el que el usuario puede interactuar <br>
-      escribiendo texto o activando una acción, después se puede procesar la información y se dará una respuesta.<br>
+      El formulario es la parte del sitio web en el que el usuario puede interactuar escribiendo texto o activando una acción, después se puede procesar la información y se dará una respuesta.<br>
       Se crea con la etiqueta <b>form</b> con su inicialización y finalización. <br>
       Dentro de la etiqueta de inicialización se colocan atributos como por ejemplo: <br>
-      El atributo <b>action</b> recibe como valor una URL que se encarga de procesar los datos que contenga el formulario, si no se coloca un valor,<br>
-      se recarga la página actual y si se coloca un '#' no se recarga la página y hace el efecto de enviar el formulario (ejemplo: action="datos.php").<br>
+      El atributo <b>action</b> recibe como valor una URL que se encarga de procesar los datos que contenga el formulario, si no se coloca un valor, se recarga la página actual y si se coloca un '#' no se recarga la página y hace el efecto de enviar el formulario (ejemplo: action="datos.php").<br>
       Estos datos son mandados al servidor el cual evalúa que sean seguros, los procesa y valida.<br>
-      El atributo <b>method</b> complementa el metodo "action" y permite decidir por que metodo se puede enviar la información (POST o GET) (ejemplo: method="GET").<br>
+      El atributo <b>method</b> complementa el método "action" y permite decidir por que método se puede enviar la información (POST o GET) (ejemplo: method="GET").<br>
       <span style="color: black; background:rgb(180, 240, 240)">^ Este último atributo es de una programación más avanzada ^</span><br>
       El atributo <b>autocomplete="on|off"</b> permite autocompletar el formulario con valores guardados (ejemplo: form autocomplete="on">)
     </p>
@@ -62,21 +60,21 @@
       (ejemplo: name="email" es como decir en el programa que en éste caso el input tiene el nombre de "email").<br>
       El atributo "name" es importante al procesar los datos.<br>
       El atributo <b>id</b> crea un identificador para el elemento donde de usa, esto se usa junto con otras etiquetas (ejemplo: id="nombre").<br>
-      También se puede usar el atributo <b>class</b> para usarlos con JavaScript (ejemplo: clas="class-name").<br>
+      También se puede usar el atributo <b>class</b> para usarlos con JavaScript (ejemplo: class="class-name").<br>
       El atributo <b>required</b> sirve para indicar que un campo debe ser llenado, es decir que no puede tener un valor nulo, este atributo se coloca solo (ejemplo: &#60;input type="checkbox" required&#62;Acepto términos).<br>
       El atributo <b>readonly</b> niega la modificación de un campo por parte del usuario, este atributo se coloca solo (ejemplo: &#60;input type="text" readonly&#62;).<br>
       El atributo disable desactiva un campo, algunos navegadores aplican "readonly" a los campos con "disable", este atributo se coloca solo (ejemplo: &#60;input type="text" disable&#62;).<br/>
-      El atributo <b>pattern=" "</b> sirve para las expresiones regulares que es un tema muy extenso y sirven en este caso para especificar la validación de un dato introducido como que lleve .com o que contengan determinado numero de letras y determinado numero de numeros.
+      El atributo <b>pattern=" "</b> sirve para las expresiones regulares que es un tema muy extenso y sirven en este caso para especificar la validación de un dato introducido como que lleve .com o que contengan determinado número de letras y determinado número de números.
     </p>
     <p>
-      La etiqueta <b>textarea</b> con su inicialización y finalización, coloca un campo grande para escribir un texto mas amplio.<br>
+      La etiqueta <b>textarea</b> con su inicialización y finalización, coloca un campo grande para escribir un texto más amplio.<br>
       Se pueden especificar sus detalles agregando los atributos <b>name=""</b>, <b>id=""</b>, <b>cols=""</b>, <b>rows=""</b> o <b>placeholder=""</b><br>
-      "cols" y "rows" definen cuantas columnas y filas puede contener el cuadro de texto aunque eso se puede modificar con CSS.
+      "cols" y "rows" definen cuantas columnas y filas puede contener el cuadro de texto, aunque eso se puede modificar con CSS.
     </p>
     <p>
       Los textos de los formularios que están afuera de los campos pueden ser creados dentro de etiquetas <b>label</b><br>
       La etiqueta <b>label</b> con su inicialización y finalización nos permite vincular texto a un "input".<br>
-      Dentro de ésta etiqueta se coloca el atributo <b>for</b> colocándole de valor el "id" del "input", <br>
+      Dentro de esta etiqueta se coloca el atributo <b>for</b> colocándole de valor el "id" del "input", <br>
       así al dar clic en el texto se podrá escribir en el campo (ejemplo: for="id del input"). <br>
       También se puede colocar un "input" dentro de la etiqueta "label" para vincularlos sin necesidad de un "id" ni "for".
     </p>
@@ -165,6 +163,6 @@
     <hr>
     <h3>Formularios con IFrames</h3>
     También se pueden colocar formularios con la ayuda de <b>IFrames</b>, ejemplo:<br/>
-    Se puede obtner un formulario facilmente con la página <a target="_blank" href="https://developers.facebook.com/">Facebook for developers</a>, nos dirigimos a la pestaña <b>Docs</b> o <b>Documentos</b> y de ahí al bloque de <b>Integraciones sociales</b>, en este bloque buscamos y accedemos a la opción <b>Social plugins</b> y de ahí se selecciona la opción que nos interese, en este caso será la pestaña <b>Plugin de páginas</b>, en esa opción se diseña el IFrame y una vez diseñada se presiona el botón <b>Obtener código</b> y se copia el código del IFrame que se encuentra en la segunda pestaña de la ventana emergente. Se pega el IFrame en donde se desee del código HTML, se suele colocar dentro de una etiqueta <b>div</b> y lo q hará es pedir al usuario escribir un texto y mandarnoslo a nuestro inbox de Facebbok.
+    Se puede obtener un formulario fácilmente con la página <a target="_blank" href="https://developers.facebook.com/">Facebook for developers</a>, nos dirigimos a la pestaña <b>Docs</b> o <b>Documentos</b> y de ahí al bloque de <b>Integraciones sociales</b>, en este bloque buscamos y accedemos a la opción <b>Social plugins</b> y de ahí se selecciona la opción que nos interese, en este caso será la pestaña <b>Plugin de páginas</b>, en esa opción se diseña el IFrame y una vez diseñada se presiona el botón <b>Obtener código</b> y se copia el código del IFrame que se encuentra en la segunda pestaña de la ventana emergente. Se pega el IFrame en donde se desee del código HTML, se suele colocar dentro de una etiqueta <b>div</b> y lo q hará es pedir al usuario escribir un texto y mandárnoslo a nuestro inbox de Facebbok.
   </body>
 </html>
