@@ -18,53 +18,98 @@
   <p>
     <h2>Contenido embebido</h2>
     Contenido que no es parte del documento html sino que se encuentra en una fuente externa y se inserta en el documento html.<br>
-    Existen dos tipos de imágenes:<br><br>
-    <b>Mapa de bits</b>: conjunto de pixeles que unidos forman una imagen<br>
-    .jpg .jpeg .png (los png pesan mucho)<br>
-    .gif (animaciones)<br>
-    .webp (pesa poco y soporta transparencia pero no es compatible con todos los navegadores)<br>
-    Otro inconveniente es que se tiene que modificar escala de la imagen para ser compatible con cada dispositivo<br>
-    <i>Se puede usar la página <b>caniuse</b> para verificar las imágenes compatibles con los navegadores</i><br><br>
-    <b>Vectoriales</b>: es código matemático, éstas se pueden escalar (aumentar tamaño) sin perder resolución.<br>
-    .svg, pesa poco, tiene buena resolución y se renderiza (es compatible) en cada dispositivo.<br><br>
-    La etiqueta para agregar imágenes es <b>img</b>, es una etiqueta sin finalización o self closing.<br>
-    Con el atributo obligatorio <b>src</b> (de source) se coloca el origen o fuente de esta imagen (ejemplo: src="ruta/nombre.jpg").<br>
-    Se puede colocar el atributo <b>alt="pequeñísima descripción de la imagen"</b> para que, si por alguna razón, el navegador no carga la imagen, aparece en su lugar la descripción.<br>
-    además de que las personas con discapacidad utilizan programas lectores los cuales leen estas descripciones y ayudan a entender mejor la página,<br>
-    también sirve para que la imagen aparezca en el navegador de google.<br>
-    Con los atributos <b>width="#" height="#"</b> (ancho y alto) se modifica el ancho y alto de la imagen.<br>
-    Las imágenes .svg sólo se pueden modificar en uno de estos dos atributos y se acoplan automáticamente para verse uniformes,<br>
-    en cambio en las demás imágenes es opcional poner solo uno de los dos atributos o los dos para modificar su proporción.<br>
-    (aunque con CSS se puede omitir estos dos atributos en HTML).<br>
-    Se pude usar el atributo <b>title="descripción"</b> para que al sobrepasar el cursor en la imagen, se visualice un cuadro de texto con la descripción colocada en <b>title</b>.<br><br>
-    En cada dispositivo las resolución de videos o imágenes es diferente, en los celulares las imágenes de 1800 pixeles se ven muy nítidas por tener disponibles en la pantalla 300 pixeles.<br> 
-    <b>devicePixelRadio</b> es la relación con los pixele reales originales de fabricante que tiene un imagen contra la cantidad de pixeles que se tiene disponible para mostrar el contenido.<br>
-    <b>Pixeles de viewport</b>: pixeles disponibles para mostrar contenido.<br>
-    <b>Pixeles reales</b>: pixeles físicos implementados por el fabricante en la pantalla.<br>
-    <b>devicePixelRadio = PixelesReales/PixelesViewport</b><br>
-    Entre más Pixeles reales que Pixeles de viewport haya se verá más nítida la imagen. <br><br> 
-    Con el atributo <b>srcset</b> se pueden colocar varias imágenes determinando el devicePixelRadio para que el navegador escoja la imagen adecuada para el dispositivo.<br>
-    ejemplo: img srcset="img/pegasuschico.png 2x, img/pegasusgrande.png x4" src="img/pegasusdefault.png"><br>
-    En este ejemplo la imagen cambiará dependiendo de cuanto devicePixelRadio soporta la pantalla del dispositivo, x2, x4 o default.
-    <br>
-    En algunos navegadores como Chrom se guarda esta configuración en la memoria cache al cargar la página por primera vez y no se modificará <br>
-    la especificación del "srcset" aunque se modifique el código. Aunque en otros navegadores como Firefox no se guarda esta modificación en la memoria cache.<br><br>
-    <br>
-    Con la etiqueta <b>picture</b> se pueden utilizar características como la etiqueta "img" pero con más opciones (solo puede haber una etiqueta picture).<br>
-    Dentro de esta etiqueta se utiliza la etiqueta <b>source</b> para colocar condiciones que se deben cumplir, al final se coloca la etiqueta "img" por si no se cumple ninguna condición "source". <br>
-    cuando alguna condición source se cumple, no se tomarán en cuenta los source consecutivos.<br>
-    Dentro de la etiqueta "source" se coloca el atributo <b>srcset=" "</b> colocando entre las comillas la ruta de una imagen.<br>
-    Dentro de la etiqueta "img" se coloca el atributo <b>src=" "</b> para indicar dentro de las comillas la ruta de la imagen<br>
-    Las condiciones de los "source" se colocan después de el atributo que indica la ruta de la imagen con el atributo <b>media=" "</b><br>
-    Se puede colocar entre las comillas <b>(min-width: 800px)</b> para indicar en este caso que el ancho mínimo para que aparezca la imagen sea de 800 pixeles (si el ancho de pantalla es de más de 800 pixeles aparece la imagen).<br>
-    El código se lee de arriba para abajo, así que es importante colocar las condiciones de más grande a más pequeños pixeles.<br>
-    (ejemplo: source srcset="..." media="...800..."<br>
-    source srcset="..." media="...400..."<br>
-    img src="...svg">)<br>
-    Se puede colocar el atributo <b>type=" "</b> en vez de "media" para indicar entre las comillas el tipo de imagen que se colocará y así el navegador si es que soporta la imagen se adaptará al ancho de la pantalla<br>
-    (ejemplo: type="image/webp">)<br>
-    Se podría colocar otro "source" con otro type si es que un navegador (por ejemplo safari que no soporta .webp) no soporta el tipo de imagen<br>
-    Entonces el condicional se saltaría al segundo "type" (ejemplo: type="image/jpg">)<br><br>
+    Existen dos tipos de imágenes:
+    <p>
+      <b>Mapa de bits</b>: conjunto de pixeles que unidos forman una imagen.
+      <ul>
+        <li>.jpg .jpeg .png (los png pesan mucho).</li>
+        <li>.gif (animaciones).</li>
+        <li>.webp (pesa poco y soporta transparencia pero no es compatible con todos los navegadores).</li>
+      </ul>
+      Otro inconveniente es que se tiene que modificar escala de la imagen para ser compatible con cada dispositivo<br>
+      <i>Se puede usar la página <b>caniuse</b> para verificar las imágenes compatibles con los navegadores</i>
+    </p>
+    <p>
+      <b>Vectoriales</b>: es código matemático, éstas se pueden escalar (aumentar tamaño) sin perder resolución.
+      <ul>
+        <li>.svg, pesa poco, tiene buena resolución y se renderiza (es compatible) en cada dispositivo.</li>
+      </ul>
+    </p>
+    <p>
+      La etiqueta para agregar imágenes es <b>img</b>, es una etiqueta sin finalización o self closing.<br>
+      Con el atributo obligatorio <b>src</b> (de source) se coloca el origen o fuente de esta imagen (ejemplo: src="ruta/nombre.jpg").<br>
+      Se puede colocar el atributo <b>alt="pequeñísima descripción de la imagen"</b> para que, si por alguna razón, el navegador no carga la imagen, aparece en su lugar la descripción.<br>
+      además de que las personas con discapacidad utilizan programas lectores los cuales leen estas descripciones y ayudan a entender mejor la página,<br>
+      también sirve para que la imagen aparezca en el navegador de google.<br>
+      Con los atributos <b>width="#" height="#"</b> (ancho y alto) se modifica el ancho y alto de la imagen.<br>
+      Las imágenes .svg sólo se pueden modificar en uno de estos dos atributos y se acoplan automáticamente para verse uniformes,<br>
+      en cambio en las demás imágenes es opcional poner solo uno de los dos atributos o los dos para modificar su proporción.<br>
+      (aunque con CSS se puede omitir estos dos atributos en HTML).<br>
+      Se pude usar el atributo <b>title="descripción"</b> para que al sobrepasar el cursor en la imagen, se visualice un cuadro de texto con la descripción colocada en <b>title</b>.
+    </p>
+    <p>
+      En cada dispositivo las resolución de videos o imágenes es diferente, en los celulares las imágenes de 1800 pixeles se ven muy nítidas por tener disponibles en la pantalla 300 pixeles.<br> 
+      <b>devicePixelRadio</b> es la relación con los pixele reales originales de fabricante que tiene un imagen contra la cantidad de pixeles que se tiene disponible para mostrar el contenido.
+      <ul>
+        <li><b>Pixeles de viewport</b>: pixeles disponibles para mostrar contenido.</li>
+        <li><b>Pixeles reales</b>: pixeles físicos implementados por el fabricante en la pantalla.</li>
+        <li><b>devicePixelRadio = PixelesReales/PixelesViewport</b></li>
+      </ul>
+      Entre más Pixeles reales que Pixeles de viewport haya se verá más nítida la imagen.
+    </p>
+    <p>
+      Con el atributo <b>srcset</b> se pueden colocar varias imágenes determinando el devicePixelRadio para que el navegador escoja la imagen adecuada para el dispositivo.<br>
+      ejemplo: img srcset="img/pegasuschico.png 2x, img/pegasusgrande.png x4" src="img/pegasusdefault.png"><br>
+      En este ejemplo la imagen cambiará dependiendo de cuanto devicePixelRadio soporta la pantalla del dispositivo, x2, x4 o default.
+      <br>
+      En algunos navegadores como Chrom se guarda esta configuración en la memoria cache al cargar la página por primera vez y no se modificará <br>
+      la especificación del "srcset" aunque se modifique el código. Aunque en otros navegadores como Firefox no se guarda esta modificación en la memoria cache.
+    </p>
+    <p>
+      Con la etiqueta <b>picture</b> se pueden utilizar características como la etiqueta "img" pero con más opciones (solo puede haber una etiqueta picture).<br>
+      Dentro de esta etiqueta se utiliza la etiqueta <b>source</b> para colocar condiciones que se deben cumplir, al final se coloca la etiqueta "img" por si no se cumple ninguna condición "source". <br>
+      cuando alguna condición source se cumple, no se tomarán en cuenta los source consecutivos.<br>
+      Dentro de la etiqueta "source" se coloca el atributo <b>srcset=" "</b> colocando entre las comillas la ruta de una imagen.<br>
+      Dentro de la etiqueta "img" se coloca el atributo <b>src=" "</b> para indicar dentro de las comillas la ruta de la imagen<br>
+      Las condiciones de los "source" se colocan después de el atributo que indica la ruta de la imagen con el atributo <b>media=" "</b><br>
+      Se puede colocar entre las comillas <b>(min-width: 800px)</b> para indicar en este caso que el ancho mínimo para que aparezca la imagen sea de 800 pixeles (si el ancho de pantalla es de más de 800 pixeles aparece la imagen).<br>
+      El código se lee de arriba para abajo, así que es importante colocar las condiciones de más grande a más pequeños pixeles.<br>
+      (ejemplo: source srcset="..." media="...800..."<br>
+      source srcset="..." media="...400..."<br>
+      img src="...svg">).<br>
+      Se puede colocar el atributo <b>type=" "</b> en vez de "media" para indicar entre las comillas el tipo de imagen que se colocará y así el navegador si es que soporta la imagen se adaptará al ancho de la pantalla.<br>
+      (ejemplo: type="image/webp">)<br>
+      Se podría colocar otro "source" con otro type si es que un navegador (por ejemplo safari que no soporta .webp) no soporta el tipo de imagen.<br>
+      Entonces el condicional se saltaría al segundo "type" (ejemplo: type="image/jpg">).
+    </p>
+    <p>Existen dos tipos d imágenes clasificadas por la pérdida de calidad</p>
+    <dd>
+      <dt>Lossy (con pérdida).</dt>
+      <dd>El formato de la imagen permite que pierda calidad para optimizar el peso de la imagen.</dd>
+      <dd>Se aproximan a su imagen original.</dd>
+      <dd>Podría reducir la cantidad de colores en su imagen o analizar la imagen en busca de datos innecesarios, por consiguiente, puede reducir su tamaño, lo que mejora el tiempo de carga de la página, pero pierde su calidad.</dd>
+      <dd>Son ideales para usar en sitios en donde el tamaño del archivo y la velocidad de descarga son importantes.</dd>
+      <ul>
+        <li>JPG/JPEG - utiliza una gama de colores ilimitada (útil para fotografía).</li>
+        <li>SVG - utiliza vectores (útil en iconos y logotipos escalables).</li>
+      </ul>
+      <dt>Lossless (sin pérdida).</dt>
+      <dd>El formato de la imagen no permite que pierda calidad.</dd>
+      <dd>Captura todos los datos del archivo original por lo que no se pierde nada de la imagen original.</dd>
+      <dd>Puede comprimirse, pero podrá reconstruir su imagen al estado original.</dd>
+      <ul>
+        <li>GIF - genera intercambio de gráficos.</li>
+        <li>PNG 8 - utiliza 256 colores (útil para iconos o logotipos).</li>
+        <li>PNG 24 - utiliza más de 256 colores (útil para imágenes fijas).</li>
+      </ul>
+    </dl>
+    <p>
+      En promedio una imagen debe pesar alrededor de 70 kilobytes por lo que existen métodos para disminuir los bytes de las imágenes:
+      <ul>
+        <li><b><a href="https://tinypng.com/" target="_blank" rel="noopener noreferrer">Tiny PNG</a>:</b> Es una página web que se encarga de comprimir el tamaño de una imagen para que sea más ligera.</li>
+        <li><b><a href="https://www.verexif.com/" target="_blank" rel="noopener noreferrer">Verifix</a>:</b> Es una página web que se encarga de eliminar los metadatos de una imagen, como fecha o ubicación, para hacerla más ligera.</li>
+      </ul>
+    </p>
     <blockquote>
       <i>
         Páginas sugeridas para imágenes gratis:<br>
