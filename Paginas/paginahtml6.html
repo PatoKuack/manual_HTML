@@ -16,10 +16,16 @@
       Con la etiqueta <b>video</b> se pueden insertar videos colocando su inicialización y finalización.<br>
       Con el atributo <b>src=" "</b> se coloca dentro de las comillas la ruta del video que se quiera colocar.<br>
       Con el atributo <b>width=" "</b> se coloca el ancho del video y automáticamente se adapta el largo.<br>
-      Con el atributo <b>controls</b> se activa el formato video para poder reproducirlo, éste atributo es booleano y no necesita parámetros, es decir únicamente se coloca el atributo a secas.<br>
+      Con el atributo <b>controls</b> se activa el formato video para poder reproducirlo, éste atributo es booleano y no necesita parámetros, es decir únicamente se coloca el atributo o no se coloca.<br>
       Con el atributo <b>poster=" "</b> se coloca entre las comillas la ruta de la imagen que se quiere mostrar a primera vista en el video.<br>
-      Con el atributo <b>autoplay</b> se reproduce el video automáticamente, los navegadores bloquean la reproducción automática por malas prácticas en marketing, sin embargo después del primer video los siguientes se reproducirán automáticamente, este atributo al igual que "controls es booleano y no tiene parámetros.<br>
+      Con el atributo <b>preload="auto"</b> se comienza a renderiza el video cuando se está cargando la página.<br>
+      Con el atributo <b>autoplay</b> se reproduce el video automáticamente, aunque los navegadores bloquean la reproducción automática porque existen malas prácticas en marketing, sin embargo después del primer video los siguientes se reproducirán automáticamente, este atributo al igual que "controls es booleano y no tiene parámetros.<br>
       Con el atributo <b>muted</b> los videos que se reproduzcan automáticamente se reproducirán sin sonido.<br>
+      Se le puede adicionar al link del video <b>#t=10,60</b> para que al momento de reproducir el video, se inicie (en este caso) en el segundo 10 y una vez en reproducción se detenga (en este caso) en el segundo 60, ejemplo: src="./myVideo.mp4#t=50,75".<br>
+      <h3>Source</h3>
+      La etiqueta <b>&#60;source&#62;</b> es selfclosing, se cierra a sí misma (como la etiqueta <i>img</i>); en esta etiqueta se coloca el atributo <i>src="/_ruta_"</i> en vez de colocarlo en la etiqueta <b>video</b> y <b>source</b> se puede colocar dentro de una etiqueta <b>&#60;video&#62;</b> varias veces para especificar diferentes rutas del video, esto para asegurar que cualquier navegador pueda mostrar el video.<br/>
+      Si el video está en formato .m4v en el primer source y el navegador no entiende ese formato, entonces buscará el siguiente sorurce en el cual se le puede colocar la ruta del video en formato .mp4.<br/>
+      También sirve para colocar diferentes rutas de video en línea, si no se encuentra una ruta, se reproducirá la siguiente ruta especificada en el source.
       <h2>Audios</h2>
       Con la etiqueta <b>audio</b> se pueden insertar audios colocando su inicialización y finalización.<br>
       Se le pueden incluir todos los atributos de la etiqueta "video" excepto el atributo "poster".<br>
