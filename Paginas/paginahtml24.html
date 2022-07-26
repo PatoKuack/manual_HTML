@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Estilos/stylehtml20.css">
+  <title>Lectores de pantalla</title>
+</head>
+<body class="body">
+  <header class="header container">
+    <h1 class="center">Lectores de pantalla.</h1>
+    <p>Son softwares que mapean las páginas que usamos y las lee en voz alta.</p>
+    <p>Existe una combinación de lectoresde pantalla con navegadores que hacen más eficaz la experiencia a los usuarios:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Lectores</th>
+          <th>Navegadores</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NVDA</td>
+          <td>Mozilla Firefox</td>
+        </tr>
+        <tr>
+          <td>JAWS</td>
+          <td>Microsoft Internet Explorer</td>
+        </tr>
+        <tr>
+          <td>VoiceOver</td>
+          <td>Safari</td>
+        </tr>
+        <tr>
+          <td>ChromeVox</td>
+          <td>Google Chrome</td>
+        </tr>
+      </tbody>
+    </table>
+  </header>
+  <main>
+    <!-- Accessibility tree -->
+    <section class="container">
+      <h2>Accessibility tree.</h2>
+      <p>En el inspector de elementos en la sección de <i>Elementos</i> se encuentra una subsección en donde se muestran los estilos, en esta subsección se puede seleccionar la ficha <b>Accessibility</b> y se muestra un <i>árbol de accesibilidad</i> o <i>accessibility tree</i>.</p>
+      <p>El <i>acessibility tree</i> es un mapeo que se crea mientras se carga la página cogiendo todo el HTML semantico y muestra la estructura de la página y los elementos dentro de ella, en el <i>accessibility tree</i> se conectan los lectores de pantallas para leer el sitio web y saber que tienen que leer y en que orden. Al seleccionar un elemento del árbol se puede visualizar los contenidos del elemento, su rol y si es enfocable por medio del teclado o por lectores de pantallas.</p>
+      <p>Con esto se puede verificar que la estructura de la página web facilite la lectura a los lectores de pantalla y el teclado.</p>
+    </section>
+    <!-- ARIA -->
+    <section class="container">
+      <h2>ARIA</h2>
+      <p>A veces el HTML semántico no es suficiente para las aplicaciones de accesibilidad sobre todo paara páginas interactivas que utilizan JavaScript, para estos casos se utiliza ARIA.</p>
+      <p>ARIA ( Accessible Rich Internet Applications ): Un conjunto de atributos especiales para accesibilidad que pueden añadirse a cualquier etiqueta, pero especialmente adaptado a HTML.</p>
+      <p>Fue creado por la W3C, lo crearon para que podamos comunicar cambios especiales en nuestras aplicaciones.</p>
+      <h3>Atributos de ARIA:</h3>
+      <!-- <p>
+      </p> -->
+      <ul>
+        <li>Roles</li>
+        <li>Propiedades</li>
+        <li>Estados</li>
+      </ul>
+      <h3>Roles de ARIA</h3>
+      <p>Define el tipo general del objeto (como un artículo, una alerta o un deslizador).</p>
+      <p>Los roles le comunican al navegadores cuales son las interacciones que debería esperar, cómo se va a usar este objeto en el proyecto y cómo se navega entre las secciones del proyecto. Es mejor depender del HTML semántico para comunicar los roles, por lo que los roles se deben utilizar en situaciones muy especificas.</p>
+      <h3>Propiedades de ARIA</h3>
+      <p>Comunican atributos que son esenciales para el comportamiento o significado de un elemento pero que suelen comunicar visualmente como las flechas que despliegan un carrusel de imágenes o un switch que cambia el tema de la página.</p>
+      <p>Con el atributo <b>aria-label=""</b> se puede agregar una descripción a los elementos que solamente se comunican de forma visual, de esta forma los lectores de pantalla pueden leer en voz alta estos elementos.</p>
+      <h3>Estados de ARIA</h3>
+      <p>Comunican estados y cambios de estados en elementos que se suelen comunicar visualmente como esconder elementos del lector que también estan escondidos visualmente para los usuarios.</p>
+      <p>Con el atributo <b>aria-hidden="true"</b> se pueden esconder elementos al lector de pantalla, ejemplo con un carrusel de imágenes: ul > li:aria-hidden > button > img</p>
+      <p>Cuando se aplica ARIA a interacciones, se suele utilizar con JavaScript, el método element.setAttribute("aria-hidden", "true"); para colocar el atributo a una etiqueta o con el método element.removeAttribute("aria-hidden"); para remover el atributo de la etiqueta.</p>
+      <p>Con el atributo <b>aria-live=" off | polite | assertive "</b> se puede establecer la prioridad con la que el lector de pantalla debe tratar a los cambios dinámicos que surgen.</p>
+      <ul>
+        <li><b>off</b> es la configuración predeterminada.</li>
+        <li><b>polite</b> hace que el lector de pantalla termine de leer el elemento actual para leer el cambio dinámico. Se utiliza cuando el mensaje que se quiere comunicar, no es importante.</li>
+        <li><b>assertive</b> interrumpe la lectura del elemento actual para leer el cambio dinámico. Se utiliza cuando se quiere dar prioridad al mensaje.</li>
+      </ul>
+      <p>Algunos navegadores necesitan que el elemento con aria-live se coloque como el elemento padre del elemento dinámico, ejemplo:</p>
+      <code class="example">
+        &#60;div aria-live="assertive" &#62;<br/>
+        &emsp;&#60;div&#62; ¡El mensage acaba de ser mandado correctamente! &#60;/div&#62;<br/>
+        &#60;/div&#62;<br/>
+      </code>
+    </section>
+  </main>
+  <!-- Referencias -->
+  <footer class="container footer">
+    <h3>Referencias y ayudas:</h3>
+    <p>
+      <a class="link" href="https://www.w3.org/TR/wai-aria/#propcharacteristic_value" target="_blank" rel="noopener noreferrer">Documentación ARIA</a><br/>
+      <a class="link" href="https://web.dev/aria-labels-and-relationships/" target="_blank" rel="noopener noreferrer">Relaciones de ARIA labels</a><br/>
+      <a class="link" href="https://www.usableyaccesible.com/ejemplo_aria_live/ejemplo_liveregions.html" target="_blank" rel="noopener noreferrer">ARIA atomic y relevant</a><br/>
+    </p>
+  </footer>
+</body>
+</html>

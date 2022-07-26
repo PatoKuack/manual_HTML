@@ -1,0 +1,73 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p, table {
+  margin-top: .3rem;
+}
+p, table, ul {
+  margin-bottom: 1rem;
+}
+li {
+  list-style-position: inside;
+}
+li > ul {
+  margin-left: 1rem;
+}
+h1, h2 {
+  margin: 1rem 0;
+}
+h1 {
+  margin-bottom: 2rem;
+}
+h3 {
+  margin-bottom: .3rem;
+}
+img {
+  width: 90%;
+}
+
+.body {
+  line-height: 1.2em;
+  background-color: rgb(225, 200, 238);
+}
+.table * {
+  padding: 0 .5rem;
+}
+
+.container {
+  max-width: 600px;
+  margin-top: 1rem;
+  padding: 2em;
+  padding-bottom: 3rem;
+  background-color: rgb(183, 213, 235);
+  border-style: solid;
+}
+.footer {
+  padding-bottom: .5rem;
+}
+
+.example {
+  display: block;
+  width: fit-content;
+  padding: .5rem 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  border-style: double;
+}
+
+.container, .example, .table, .table * {
+  margin-left: auto;
+  margin-right: auto;
+  border-width: .1rem;
+  border-style: solid;
+  border-color: cornflowerblue;
+}
+
+.link {}
+
+.center {
+  text-align: center;
+}

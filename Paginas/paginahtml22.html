@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Estilos/stylehtml20.css">
+  <title>Ayudas para la accesibilidad</title>
+</head>
+<body class="body">
+  <header class="header container">
+    <h1 class="center">Ayudas para la accesibilidad.</h1>
+  </header>
+  <main>
+    <!-- HTML Semántico -->
+    <section class="container">
+      <h2>HTML Semántico.</h2>
+      <p>El HTML semántico es una de las herramientas más poderosas a la hora de implementar la accesibilidad web, nos ayuda con algunos aspectos de presentación y le agrega significado a nuestro contenido en el navegador.</p>
+      <ul>
+        <li>Los div no reciben foco porque son un elemento presentacional, no esperan ninguna interacción a menos de que tú lo programes.</li>
+        <li>
+          Todas las interacciones se hacen a través de botones por lo que los elementos con interacción se usan con etiquetas <i>button</i> (ejemplo en un carrusel: ul > li > button > img).
+        </li>
+      </ul>
+    </section>
+    <!-- Contraste de color -->
+    <section class="container">
+      <h2>Contraste de color.</h2>
+      <p>El contraste de color es la diferencia existente entre dos o más colores que interactúan en un diseño de forma que afectan al modo en el cual se percibe. El color según sus diferentes características influye en el efecto que causa en las personas.</p>
+      <p>Cuando el contraste entre elementos es muy bajo, no se puede ver correctamente y para evitar esto se puede utilizar Chrome Dev Tools para revisar el contraste de los colores de los textos. En el inspector de elementos de Google Chrome, en la sección de estilos, aparecen los colores de los elementos seleccionados en la página y si se da clic a los cuadritos de colores se abrirá un pequeño panel que muestra en ratio de contraste y a que nivel de WCAG estaremos llegando con ese ratio.</p>
+    </section>
+    <!-- Iconos -->
+    <section class="container">
+      <h2>Iconos.</h2>
+      <p>Los iconos no siempre son universales y pueden ser confusos para algunas personas por lo que es importante agregar un texto referente al icono.</p>
+    </section>
+    <!-- Skip links -->
+    <section class="container">
+      <h2>Skip links</h2>
+      <p>Son los enlaces de página internos que ayudan a la navegación por la página actual, en lugar de a páginas completamente nuevas, pero modifican la URL de la página agregando un hash y el id del elemento enlazado (ejemplo: &#60;a href="#main"&#62;...).</p>
+    </section>
+  </main>
+  <!-- Referencias -->
+  <footer class="container footer">
+    <h3>Referencias y ayudas:</h3>
+    <p>
+      <a class="link" href="https://www.arkaitzgarro.com/html5/capitulo-2.html" target="_blank" rel="noopener noreferrer">Artículo de semántica HTML</a><br/>
+      <a class="link" href="http://html5doctor.com/" target="_blank" rel="noopener noreferrer">Implementación de HTML5</a><br/>
+      <a class="link" href="https://www.nachomadrid.com/2020/05/guia-accesibilidad-web-color/" target="_blank" rel="noopener noreferrer">Guía de accesibilidad web (color)</a><br/>
+      <a class="link" href="https://www.usableyaccesible.com/textosalternativosaccesibles/mapa_decision_texto_alternativo.php" target="_blank" rel="noopener noreferrer">Cómo definir el alt de las img</a><br/>
+    </p>
+  </footer>
+</body>
+</html>

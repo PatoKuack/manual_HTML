@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Estilos/stylehtml20.css">
+  <title>Navegación con teclado</title>
+</head>
+<body class="body">
+  <header class="header container">
+    <h1 class="center">Navegación con teclado.</h1>
+    <p>El teclado es muy importante en la accesibilidad web porque las tecnologías asistivas tienden a conectarse con el teclado para darle a sus usuarios diferentes maneras de navegar cuando no tienen acceso a un mouse o un teclado.</p>
+    <p>Los elementos que reciben foco de teclado son elementos interactivos:</p>
+    <ul>
+      <li>Enlaces: redireccionan a otra página, son para la navegación.</li>
+      <li>Botones: ayudan a interactuar con la página de alguna manera.</li>
+      <li>Formularios: requieren una interacción del usuario para llenar los datos.</li>
+    </ul>
+  </header>
+  <main>
+    <!-- Navegación con teclado -->
+    <section class="container">
+      <h2>Outline</h2>
+      <p>Los estilos de <b>outline</b> de los elementos son importantes para que las personas que utilizan el teclado para navegar en las páginas web vean en donde estan posicionadas, generalmente se utilizan las pseudoclases <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus" target="_blank" rel="noopener noreferrer">:focus</a>, <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within" target="_blank" rel="noopener noreferrer">:focus-widthin</a>, <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible" target="_blank" rel="noopener noreferrer">:focus-visible</a> para modificar los estilos de los elementos interactivos y sea notable que se les esta haciendo focus.</p>
+    </section>
+    <section class="container">
+      <h2>Tabindex</h2>
+      <p>Indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado.</p>
+      <p>Recuerda que los elementos enfocables son enlaces, botones y elementos de un formulario y son estos a los que se les coloca el atributo tabindex.</p>
+      <h3>Valores de Tabindex:</h3>
+      <ul>
+        <li>Valor negativo(-1): El elemento debe ser enfocado, pero no debe de ser accesible a través de la navegación con teclado.</li>
+        <li>Valor positivo (>0): Debe poder ser enfocado y su orden relativo es definido por el valor del atributo. Se puede definir un orden secuencial del teclado colocando este valor a los elementos (1 primero en enfocarse, ..., +n último en enfocarse), pero se debe tener cuidado con su uso porque <b>una mala gerarquia de valores puede romper el sitio web</b>.</li>
+        <li>Valor de 0: Debe ser enfocado y ser accesible a través de la navegación secuencial del teclado, pero su orden relativo es definido por convención de la plataforma, o sea, permite seguir el orden normal de la estructura HTML.</li>
+      </ul>
+      <p>Cuando se aplica tabindex a interacciones, se suele utilizar con JavaScript con el método <u>element</u><b>.setAttribute("tabindex", "-1");</b> para colocar el atributo a una etiqueta o con el método <u>element</u><b>.removeAttribute("tabindex");</b> para remover el atributo de la etiqueta.</p>
+    </section>
+    <section class="container">
+      <h2>Keycode.info</h2>
+      <p>Esta página puede escuchar cualquier tecla del teclado y mostrar la clave de la tecla, por ejemplo, si se presiona la tecla <i>Esc</i> se otendrá el numero 27 que es la clave de esa tecla y se puede aplicar de la siguiente forma:</p>
+      <code class="example">
+        document.body.addEventListener("keyup", e => listenkey(e));<br/>
+        function listenkey(e) {<br/>
+        &emsp;if (e.keycode === 27){...}<br/>
+        }
+      </code>
+    </section>
+  </main>
+  <!-- Referencias -->
+  <footer class="container footer">
+    <h2>Referencias y ayudas:</h2>
+    <p>
+      <a class="link" href="https://web.dev/using-tabindex/" target="_blank" rel="noopener noreferrer">Using tabindex</a><br/>
+    </p>
+  </footer>
+</body>
+</html>
