@@ -12,417 +12,158 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
     <link rel="stylesheet" href="../Estilos/stylehtml11.css">
     <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
-    <title>Requisitos para una página</title>
+    <title>Requerimientos básicos.</title>
   </head>
   <body>
     <header>
-      <h1>Creación de página web en HTML.</h1>
+      <h1>Requerimientos básicos.</h1>
+      <p>Se definen los requerimientos básicos para usarse como una guía o un plano del proyecto.</p>
     </header>
     <main>
       <section>
-        <div>
-          Estos son los pasos para crear una página web:<br/>
-          <span class="jam jam-pin"></span> Primero, se definen los requerimientos básicos para usarse como una guía o un plano del proyecto.<br/>
-          <span class="jam jam-pin"></span> Segundo, se crea un prototipo sin muchos detalles usando como guía la lista de requerimientos, solo para visualizar la estructura final.<br/>
-          <span class="jam jam-pin"></span> Tercero, se comienza a escribir el código  usando el prototipo como guía.
-        </div>
+        <h2>Paradigma del diseño atómico.</h2>
+        <p>Es una nomenclatura que utilizada para reducir la complejidad de los sistemas de diseño de interfaces y para definir jerarquías en los elementos. Esto ayuda a generar una mayor limpieza en la organización de los elementos utilizados en las interfaces, siendo útil tanto para las complejas como las más simples.</p>
+        <p>El diseño atómico está compuesto por elementos organizados en la siguiente jerarquía, siendo de menor a mayor: átomos, moléculas, organismos y sistemas. Se pueden añadir más niveles jerárquicos si fuera necesario.</p>
+        <p>Con este modelo se consigue una mayor consistencia y estabilidad del sistema de diseño, lo que se traducirá en un código más consistente. Además, se alcanza una mayor velocidad de trabajo y una resolución de problemas de forma más efectiva.</p>
+        <h3>Átomos</h3>
+        <p>Son los elementos básicos de la construcción de una interfaz. Su característica principal es que carecen de sentido por sí mismos, por lo que necesitarán ser acompañados por otros átomos para tener un sentido.</p>
+        <p>Los átomos pueden ser: títulos, textos, colores, tipografías, espaciados, labels, inputs o botones, entre otros.</p>
+        <p>Cuando se crea el prototipo de la página en un software, el átomo debe ser nombrado, definido y acotado con márgenes para conocer cómo se comporta al ser juntado con otros átomos y que no se cree un conflicto entre ellos.</p>
+        <h3>Moléculas</h3>
+        <p>Se obtienen juntando varios átomos diferentes, por lo que son el siguiente elemento en la jerarquía.</p>
+        <p>Las moléculas se pueden utilizar de forma independiente y aislada, ya que aportan suficiente información como para guiar una acción dentro de la interfaz.</p>
+        <p>Las moléculas pueden ser por ejemplo una cabecera, footer o post. Otro ejemplo de molécula puede ser un campo de recogida de datos, que estaría formado por una combinación entre un label y un input.</p>
+        <p>Cuando se crea el prototipo de la página en un software, las moléculas deben ser definidas y acotadas para conocer cómo se comporta en convivencia con otras moléculas, de la misma manera que ocurre con los átomos.</p>
+        <h3>Organismos</h3>
+        <p>Se obtienen juntando moléculas diferentes y forman una sección o parte de nuestro producto. Los organismos consiguen ofrecer una experiencia completa al usuario.</p>
+        <p>Pueden ser las páginas de home, contact o about que forman una web. Otro ejemplo de organismo es un formulario, que se crearía por la combinación de campos de recogida y botones.</p>
+        <h3>Sistemas</h3>
+        <p>Con varios organismos se forman sistemas que son los apartados esquematizados dentro de una página.</p>
+        <p>Los sistemas pueden ser: la web, aplicación, software o producto digital que estemos construyendo.</p>
       </section>
       <section>
-        <h2>Requerimientos básicos.</h2>
-        Escribir los requerimientos y la estructura del sitio web te permite visualizar lo realmente necesario y ver cosas que faltan, sobran, cambiar, reemplazar, modificar y todo sin necesidad de hacer código.
+        <h2>Sistemas de diseño.</h2>
+        <p>Un sistema de diseño consiste en una serie de elementos y patrones de diseño, que son utilizados como reglas o decisiones de negocio que rigen la composición de un producto.</p>
+        <ul>
+          <li>Sirven para involucrar a todas las personas del equipo en el proyecto y permitirles consultar toda la documentación creada, de forma que el trabajo sea más eficiente y fluido.</li>
+          <li>Los sistemas de diseño son evolutivos, por lo que pueden adaptarse continuamente a nuevos sistemas que van apareciendo.</li>
+          <li>Para crear un sistema de diseño es necesario establecer unos principios que deben cumplir todas las decisiones que se tomen para evitar cometer errores o generar conflictos. Algunos de estos principios pueden ser la accesibilidad, consistencia o reusabilidad. Además, todos estos principios deben ser compatibles entre sí.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Escribir requerimientos.</h2>
+        Escribir los requerimientos y la estructura del sitio web permite visualizar lo realmente necesario y ver cosas que faltan, sobran, cambiar, reemplazar, modificar y todo sin necesidad de hacer código.
         <ol>
-          <li>
-            Inicio (home).
+          <li>Inicio (home).
             <ol>
-              <li>
-                Logo y menú (header).
-              </li>
-              <li>
-                Banner.
+              <li>Logo y menú (header).</li>
+              <li>Banner.
                 <ol>
-                  <li>
-                    Título.
-                  </li>
-                  <li>
-                    Descripción.
-                  </li>
-                  <li>
-                    Botón.
-                  </li>
-                  <li>
-                    Imagen.
-                  </li>
+                  <li>Título.</li>
+                  <li>Descripción.</li>
+                  <li>Botón.</li>
+                  <li>Imagen.</li>
                 </ol>
               </li>
-              <li>
-                Servicios que ofrecemos.
+              <li>Servicios que ofrecemos.
                 <ol>
-                  <li>
-                    Desarrollo web.
-                  </li>
-                  <li>
-                    Desarrollo móvil.
-                  </li>
-                  <li>
-                    Sistemas a medida.
-                  </li>
+                  <li>Desarrollo web.</li>
+                  <li>Desarrollo móvil.</li>
+                  <li>Sistemas a medida.</li>
                 </ol>
               </li>
-              <li>
-                Banner corporativo.
+              <li>Banner corporativo.
                 <ol>
-                  <li>
-                    Imagen de fondo.
-                  </li>
-                  <li>
-                    Texto principal.
-                  </li>
-                  <li>
-                    Texto secundario.
-                  </li>
-                  <li>
-                    Botón que lleve a contacto.
-                  </li>
+                  <li>Imagen de fondo.</li>
+                  <li>Texto principal.</li>
+                  <li>Texto secundario.</li>
+                  <li>Botón que lleve a contacto.</li>
                 </ol>
               </li>
-              <li>
-                Últimos proyectos.
+              <li>Últimos proyectos.
                 <ol>
-                  <li>
-                    Mostrar algunos proyectos.
+                  <li>Mostrar algunos proyectos.
                     <ol>
-                      <li>
-                        Imagen (Screenshots).
-                      </li>
-                      <li>
-                        Título (nombre del cliente).
-                      </li>
-                      <li>
-                        Breve descripción.
-                      </li>
+                      <li>Imagen (Screenshots).</li>
+                      <li>Título (nombre del cliente).</li>
+                      <li>Breve descripción.</li>
                     </ol>
                   </li>
                 </ol>
               </li>
-              <li>
-                Footer.
+              <li>Footer.
                 <ol>
-                  <li>
-                    ¿Quieres trabajar con nosotros?
+                  <li>¿Quieres trabajar con nosotros?
                     <ol>
-                      <li>
-                        Texto adicional
-                      </li>
-                      <li>
-                        Botón de contacto.
-                      </li>
+                      <li>Texto adicional</li>
+                      <li>Botón de contacto.</li>
                     </ol>
                   </li>
-                  <li>
-                    Redes sociales.
-                  </li>
-                  <li>
-                    Copyright.
-                  </li>
+                  <li>Redes sociales.</li>
+                  <li>Copyright.</li>
                 </ol>
               </li>
             </ol>
           </li>
-          <li>
-            ¿Quiénes somos?
+          <li>¿Quiénes somos?
             <ol>
-              <li>
-                Sobre nosotros.
+              <li>Sobre nosotros.
                 <ol>
-                  <li>
-                    Imagen.
-                  </li>
-                  <li>
-                    Descripción.
-                  </li>
+                  <li>Imagen.</li>
+                  <li>Descripción.</li>
                 </ol>
               </li>
-              <li>
-                Misión.
+              <li>Misión.
                 <ol>
-                  <li>
-                    Imagen.
-                  </li>
-                  <li>
-                    Descripción.
-                  </li>
+                  <li>Imagen.</li>
+                  <li>Descripción.</li>
                 </ol>
               </li>
-              <li>
-                Visión.
+              <li>Visión.
                 <ol>
-                  <li>
-                    Imagen.
-                  </li>
-                  <li>
-                    Descripción.
-                  </li>
+                  <li>Imagen.</li>
+                  <li>Descripción.</li>
                 </ol>
               </li>
             </ol>
           </li>
-          <li>
-            Proyectos.
+          <li>Proyectos.
             <ol>
-              <li>
-                Cada proyecto:
+              <li>Cada proyecto:
                 <ol>
-                  <li>
-                    Imagen (Screenshot).
-                  </li>
-                  <li>
-                    Nombre del cliente o proyecto.
-                  </li>
-                  <li>
-                    Descripción.
-                  </li>
-                  <li>
-                    Link al proyecto
-                  </li>
+                  <li>Imagen (Screenshot).</li>
+                  <li>Nombre del cliente o proyecto.</li>
+                  <li>Descripción.</li>
+                  <li>Link al proyecto</li>
                 </ol>
               </li>
             </ol>
           </li>
-          <li>
-            Contactos.
+          <li>Contactos.
             <ol>
-              <li>
-                Datos de la empresa.
+              <li>Datos de la empresa.
                 <ol>
-                  <li>
-                    Teléfono.
-                  </li>
-                  <li>
-                    Dirección.
-                  </li>
-                  <li>
-                    Correo.
-                  </li>
-                  <li>
-                    Mapa de ubicación.
-                  </li>
+                  <li>Teléfono.</li>
+                  <li>Dirección.</li>
+                  <li>Correo.</li>
+                  <li>Mapa de ubicación.</li>
                 </ol>
               </li>
-              <li>
-                Formulario de contacto.
+              <li>Formulario de contacto.
                 <ol>
-                  <li>
-                    Integración con algún servicio (Puede ser FB o Messenger).
-                  </li>
+                  <li>Integración con algún servicio (Puede ser FB o Messenger).</li>
                 </ol>
               </li>
             </ol>
           </li>
         </ol>
       </section>
-      <section>
-        <h2>Visualización.</h2>
-        Visualizar el sitio web es como realizar un mapa o una maqueta de un posible resultado.<br/>
-        Una vez realizado el wireframe se debe mostrar al cliente para que pueda observar y dar el visto bueno, suele ocurrir que el cliente pida modificaciones y se debe de aplicar los cambios sugeridos.
-        <figure class="imagenesvisuales">
-          <img src="../Imahenes/PW1inicio.png" alt="Visualización del Inicio" title="Visualización del Inicio">
-          <hr/>
-          <img src="../Imahenes/PW2quien_soy.png" alt="Visualización del Banner" title="Visualización del Banner">
-          <hr/>
-          <img src="../Imahenes/PW3proyectos.png" alt="Visualización de Proyectos" title="Visualización de Proyectos">
-          <hr/>
-          <img src="../Imahenes/PW4contactame.png" alt="Visualización de Contacto" title="Visualización de Contacto">
-        </figure>
-      </section>
-      <section>
-        <h2>Código.</h2>
-        <p>
-          El wireframe (Home) será el guía al iniciar a escribir el código del sitio web.<br/>
-          Es buena práctica colocarle al código comentarios sobre cada bloque para ayudar a guiar futuras modificaciones en él.
-        </p>
-        <!-- Logo y menú -->
-        <section>
-          <h3>Logo y menú.</h3>
-          <article class="pagweb1">
-            <div class="cabeza">
-              <h6>head</h6>
-            </div>
-            <div class="cuerpohead">
-              <h6>body</h6>
-              <div class="principal">
-                <h6>header</h6>
-                <div class="seccion">
-                  <h6>div</h6>
-                  <div class="logo">
-                    <h6>a</h6>
-                    <div class="cont">
-                      <h6>img</h6>
-                    </div>
-                  </div>
-                  <div class="menu">
-                    <h6>nav</h6>
-                    <div class="enlace">
-                      <h6>ul</h6>
-                      <div class="articulo">
-                        <h6>li</h6>
-                        <div class="cont">
-                          <h6>a</h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          En cualquier sitio web, al dar click al logo, lo direcciona a la página de inicio por lo cual se coloca la imagen dentro de una etiqueta de enlace (a), ejemplo: a href="/"> img src=...
-        </section>
-        <!-- Banner -->
-        <section>
-          <h3>Banner.</h3>
-          <article class="pagweb1">
-            <div class="cuerpo">
-              <h6>body</h6>
-              <div class="principal">
-                <h6>main</h6>
-                <div class="seccion">
-                  <h6>section</h6>
-                  <div class="division">
-                    <h6>div</h6>
-                    <div class="cont">
-                      <h6>h1</h6>
-                      <h6>p</h6>
-                      <h6>img</h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          Con la etiqueta <b>main</b> se coloca el contenido principal de la página.<br/>
-          La sección Banner será la primera sección principal que se indicará con la etiqueta <b>section</b>, dentro de esta se colocará un contenedor con la etiqueta <b>div</b> y dentro de este contenedor del Banner se colocarán dos elementos que se presentan como dos sub-contenedores, nuevamente en código se escribirán con div. El primer sub-contenedor contiene el  título principal <b>h1</b> y el texto de presentación que se colocará con la etiqueta <b>p</b>. En el segundo sub-contenedor tiene solo la imagen, la cual se colocará con la etiqueta <b>div</b> y dentro de ella la etiqueta <b>img</b>.
-        </section>
-        <!-- Servicios que ofrecemos -->
-        <section>
-          <h3>Servicios que ofrecemos.</h3>
-          <article class="pagweb1">
-            <div class="cuerpo">
-              <h6>body</h6>
-              <div class="principal">
-                <h6>main</h6>
-                <div class="seccion">
-                  <h6>section</h6>
-                  <div class="division">
-                    <h6>h2</h6>
-                    <h6>div></h6>
-                    <div class="enlace">
-                      <h6>article</h6>
-                      <div class="cont">
-                        <h6>span</h6>
-                        <h6>h3</h6>
-                        <h6>p</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se colocará un subtítulo con la etiqueta <b>h2</b> y además se coloca su contenedor con una etiqueta <b>div</b>, dentro del contenedor <i>div</i> existen tres componentes para los cuales se colocará la etiqueta <b>article</b>. En cada <i>article</i> se tiene la misma estructura, un ícono que se delimita con la etiqueta <b>span</b>, un sub-subtítulo <b>h3</b> y un texto o párrafo con la etiqueta <b>p</b>.
-        </section>
-        <!-- Banner corporativo -->
-        <section>
-          <h3>Banner corporativo.</h3>
-          <article class="pagweb1">
-            <div class="cuerpo">
-              <h6>body</h6>
-              <div class="principal">
-                <h6>main</h6>
-                <div class="seccion">
-                  <h6>section</h6>
-                  <div class="division">
-                    <h6>div</h6>
-                    <div class="enlace">
-                      <h6>h2</h6>
-                      <h6>p</h6>
-                      <h6>div></h6>
-                      <div class="articulo">
-                        <h6>a</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se coloca su contenedor con una etiqueta <b>div</b>, dentro del contenedor <i>div</i> se coloca un subtítulo <b>h2</b>, un texto de descripción que se colocará con la etiqueta <b>p</b> y el botón de contacto que se creará usando la etiqueta <b>div</b> y dentro de ella la etiqueta <b>a</b>.<br/>
-          La imagen de fondo se coloca desde el archivo de estilos CSS.
-        </section>
-        <!-- Últimos proyectos -->
-        <section>
-          <h3>Últimos proyectos.</h3>
-          <article class="pagweb1">
-            <div class="cuerpo">
-              <h6>body</h6>
-              <div class="principal">
-                <h6>main </h6>
-                <div class="seccion">
-                  <h6>section</h6>
-                  <div class="division">
-                    <h6>h2</h6>
-                    <h6>div></h6>
-                    <div class="enlace">
-                      <h6>a</h6>
-                      <div class="articulo">
-                        <h6>article</h6>
-                        <div class="division2">
-                          <h6>div</h6>
-                          <div class="cont">
-                            <h6>h4</h6>
-                            <h6>p</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se coloca su subtítulo con la etiqueta <b>h2</b> y además se colocará su contenedor con una etiqueta <b>div</b>, dentro del contenedor <i>div</i> existen tres componentes para los cuales se colocará la etiqueta <b>a</b>. Dentro de cada enlace <i>a</i> se coloca un artículo usando la etiqueta <b>article</b>, éste a su vez contendrá un contenedor  que se define con la etiqueta <b>div</b>, dentro de éste contenedor se le colocará un sub-subtítulo con la etiqueta <b>h4</b> y un texto de descripción que se colocará con la etiqueta <b>p</b>.
-        </section>
-        <!-- Footer -->
-        <section>
-          <h3>Footer.</h3>
-          <article class="pagweb1">
-            <div class="cuerpo">
-              <h6>body</h6>
-              <div class="principal">
-                <h6>main </h6>
-                <div class="seccion">
-                  <h6>section</h6>
-                  <div class="division">
-                    <h6>h3</h6>
-                    <h6>div></h6>
-                    <h6>p</h6>
-                    <div class="enlace">
-                      <h6>a</h6>
-                      <div class="cont">
-                        <h6>span</h6>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se coloca dentro de ella un título con <b>h3</b>, al final de ente <i>section</i> se coloca el copyright, pero antes del copyright y después del título se coloca su contenedor con el comando <b>div</b>, dentro de este contenedor se coloca un enlace con la etiqueta <b>a</b>, dentro de éste un <b>span</b> para colocar íconos, cada red social que se desee agregar será un enlace <i>a</i> con su respectivo <i>span</i>. Se cierra el <b>main</b>.<br/>
-        </section>
-      </section>
     </main>
-    <section>
-      Referencias:<br/>
-      <a target="_blank" href="https://gndx.dev/">Ejemplo de página</a>
-    </section>
+    <footer>
+      <section>
+        Referencias:<br/>
+        <a target="_blank" href="https://gndx.dev/">Ejemplo de página</a>
+      </section>
+    </footer>
   </body>
 </html>

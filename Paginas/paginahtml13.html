@@ -1,82 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-   <!-- No guardar cache en navegadores -->
-   <meta http-equiv="cache-control" content="no-cache">
-   <meta http-equiv="Pragma" content="no-cache">
-   <meta http-equiv="expires" content="0">
-   <!-- ------------------- -->
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
-   <link rel="stylesheet" href="../Estilos/stylehtml11.css">
-   <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
-  <title>Títulos</title>
-</head>
-<body>
-  <header>
-    <div>
-      <h1>Servidores</h1>
-    </div>
-  </header>
-  <main>
-    <section>
-      <div>
-        <h2>Subir proyectos a la web.</h2>
-        <h3><a href="https://app.netlify.com/drop" target="_blank" rel="noopener noreferrer">Netlyfy</a></h3>
-        Netlify es una plataforma de desarrollo web que permite subir aplicaciones de cualquier tipo a la nube.<br/>
-        Entre sus servicios cuenta con Netfly Drop en el cual, arrastrando una carpeta (con un proyecto de página web) y soltándola en el área que se indica en la página, nos entrega un link, con él podremos visualizar nuestro proyecto en algún navegador web.<br/>
-        Al momento en que entregue el link del proyecto subido se puede comprar un dominio personalizado, después de realizar la transacción de compra se debe esperar entre media hora y tres horas para que los DNS se propaguen y así el sitio web funcione.
-      </div>
-    </section>
-    <section>
-      <div>
-        <h2>Comprar dominios.</h2>
-        <p>Los dominios son en donde se alojan los proyectos que se crean, es la ruta que busca un usuario en un navegador para ver el proyecto o aplicación creada como https://dominio.com</p>
-        <h3><a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">Namecheap</a></h3>
-        Es una empresa que ayuda a registrar y alojar nombres de dominio, en su página puedes buscar un dominio en su buscador y te entrega los dominios disponibles y sus costos.
-        <ul>
-          <li>.com - global</li>
-          <li>.net - servicios de red</li>
-          <li>.org - organizaciones</li>
-          <li>.edu - educación</li>
-          <li>.info - información</li>
-          <li>.biz - negocios</li>
-          <li>.ai - inteligencia artificial</li>
-        </ul>
-        <ul>
-          <li>.to - para descargas de contenido pesado / Torrens</li>
-          <li>.me - sobre ti  / Montenegro</li>
-          <li>.io - entrada-salida (tecnología) / Océano Indico</li>
-        </ul>
-        <ul>
-          <li>.ar - Argentina</li>
-          <li>.es - España</li>
-          <li>.mx - México</li>
-          <li>.fr - Francia</li>
-          <li>.uk - reino unido</li>
-        </ul>
-      </div>
-      <div>
-        <h3><a href="https://www.hostinger.com/domain-checker" target="_blank" rel="noopener noreferrer">Hostinger</a></h3>
-        <p>Es un proveedor de alojamiento web y dominios web.</p>
-        <p>El proveedor ofrece de forma gratuita la SSL (seguridad en la capa de transporte). Además, el proveedor ofrece otras herramientas por las que se paga un extra como un gestor de correo o un creador de páginas para facilitar la creación y diseño de la página, entre otras.</p>
-      </div>
-    </section>
-    <section>
-      <div>
-        <h2><a href="https://www.webempresa.com/blog/que-es-open-graph.html" target="_blank" rel="noopener noreferrer">Open Graph</a></h2>
-        Son una serie de etiquetas que se añaden al código de la página, invisibles de cara al visitante de la web, que ayudan a Facebook y a otras redes sociales como Twitter y Google+ a identificar los elementos principales del artículo que se quiere compartir: título, imagen, descripción, etc.
-      </div>
-    </section>
-  </main>
-  <footer>
-    <section>
-      <h3>Referencias:</h3>
-    </section>
-    <a target="_blank" href="https://blog.baehost.com/diferencias-entre-los-dominios-com-net-org-tld/" target="_blank" rel="noopener noreferrer">Diferencias entre dominios.</a><br/>
-    <a href="https://ogp.me/" target="_blank" rel="noopener noreferrer">Protocolos Open Graph.</a>
-  </footer>
-</body>
+  <head>
+    <!-- No guardar cache en navegadores -->
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <!-- ------------------- -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
+    <link rel="stylesheet" href="../Estilos/stylehtml11.css">
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css">
+    <title>Creación del código</title>
+  </head>
+  <body>
+    <header>
+      <h1>Creación del código.</h1>
+      <p>Se comienza a escribir el código usando el prototipo como guía.</p>
+    </header>
+    <main>
+      <section>
+        <h2>Código.</h2>
+        <p>El wireframe (Home) es la guía al iniciar a escribir el código del sitio web.</p>
+        <p>Es buena práctica colocarle al código comentarios sobre cada bloque para ayudar a guiar futuras modificaciones en él como cuando se le da mantenimiento, a esto se le llama escalabilidad.</p>
+        <p>Un código escalable es uno al que se le pueda dar mantenimiento facilmente debido a su fácil entendimiento.</p>
+        <!-- Logo y menú -->
+        <section>
+          <h3>Logo y menú.</h3>
+          <article class="pagweb1">
+            <div class="cabeza">
+              <h6>head</h6>
+            </div>
+            <div class="cuerpohead">
+              <h6>body</h6>
+              <div class="principal">
+                <h6>header</h6>
+                <div class="seccion">
+                  <h6>div</h6>
+                  <div class="logo">
+                    <h6>a</h6>
+                    <div class="cont">
+                      <h6>img</h6>
+                    </div>
+                  </div>
+                  <div class="menu">
+                    <h6>nav</h6>
+                    <div class="enlace">
+                      <h6>ul</h6>
+                      <div class="articulo">
+                        <h6>li</h6>
+                        <div class="cont">
+                          <h6>a</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          En cualquier sitio web, al dar click al logo, lo direcciona a la página de inicio por lo cual se coloca la imagen dentro de una etiqueta de enlace (a), ejemplo: a href="/"> img src=...
+        </section>
+        <!-- Banner -->
+        <section>
+          <h3>Banner.</h3>
+          <article class="pagweb1">
+            <div class="cuerpo">
+              <h6>body</h6>
+              <div class="principal">
+                <h6>main</h6>
+                <div class="seccion">
+                  <h6>section</h6>
+                  <div class="division">
+                    <h6>div</h6>
+                    <div class="cont">
+                      <h6>h1</h6>
+                      <h6>p</h6>
+                      <h6>img</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          Con la etiqueta <b>main</b> se coloca el contenido principal de la página.<br/>
+          La sección Banner será la primera sección principal que se indicará con la etiqueta <b>section</b>, dentro de esta se colocará un contenedor con la etiqueta <b>div</b> y dentro de este contenedor del Banner se colocarán dos elementos que se presentan como dos sub-contenedores, nuevamente en código se escribirán con div. El primer sub-contenedor contiene el  título principal <b>h1</b> y el texto de presentación que se colocará con la etiqueta <b>p</b>. En el segundo sub-contenedor tiene solo la imagen, la cual se colocará con la etiqueta <b>div</b> y dentro de ella la etiqueta <b>img</b>.
+        </section>
+        <!-- Servicios que ofrecemos -->
+        <section>
+          <h3>Servicios que ofrecemos.</h3>
+          <article class="pagweb1">
+            <div class="cuerpo">
+              <h6>body</h6>
+              <div class="principal">
+                <h6>main</h6>
+                <div class="seccion">
+                  <h6>section</h6>
+                  <div class="division">
+                    <h6>h2</h6>
+                    <h6>div></h6>
+                    <div class="enlace">
+                      <h6>article</h6>
+                      <div class="cont">
+                        <h6>span</h6>
+                        <h6>h3</h6>
+                        <h6>p</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se colocará un subtítulo con la etiqueta <b>h2</b> y además se coloca su contenedor con una etiqueta <b>div</b>, dentro del contenedor <i>div</i> existen tres componentes para los cuales se colocará la etiqueta <b>article</b>. En cada <i>article</i> se tiene la misma estructura, un ícono que se delimita con la etiqueta <b>span</b>, un sub-subtítulo <b>h3</b> y un texto o párrafo con la etiqueta <b>p</b>.
+        </section>
+        <!-- Banner corporativo -->
+        <section>
+          <h3>Banner corporativo.</h3>
+          <article class="pagweb1">
+            <div class="cuerpo">
+              <h6>body</h6>
+              <div class="principal">
+                <h6>main</h6>
+                <div class="seccion">
+                  <h6>section</h6>
+                  <div class="division">
+                    <h6>div</h6>
+                    <div class="enlace">
+                      <h6>h2</h6>
+                      <h6>p</h6>
+                      <h6>div></h6>
+                      <div class="articulo">
+                        <h6>a</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se coloca su contenedor con una etiqueta <b>div</b>, dentro del contenedor <i>div</i> se coloca un subtítulo <b>h2</b>, un texto de descripción que se colocará con la etiqueta <b>p</b> y el botón de contacto que se creará usando la etiqueta <b>div</b> y dentro de ella la etiqueta <b>a</b>.<br/>
+          La imagen de fondo se coloca desde el archivo de estilos CSS.
+        </section>
+        <!-- Últimos proyectos -->
+        <section>
+          <h3>Últimos proyectos.</h3>
+          <article class="pagweb1">
+            <div class="cuerpo">
+              <h6>body</h6>
+              <div class="principal">
+                <h6>main </h6>
+                <div class="seccion">
+                  <h6>section</h6>
+                  <div class="division">
+                    <h6>h2</h6>
+                    <h6>div></h6>
+                    <div class="enlace">
+                      <h6>a</h6>
+                      <div class="articulo">
+                        <h6>article</h6>
+                        <div class="division2">
+                          <h6>div</h6>
+                          <div class="cont">
+                            <h6>h4</h6>
+                            <h6>p</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se coloca su subtítulo con la etiqueta <b>h2</b> y además se colocará su contenedor con una etiqueta <b>div</b>, dentro del contenedor <i>div</i> existen tres componentes para los cuales se colocará la etiqueta <b>a</b>. Dentro de cada enlace <i>a</i> se coloca un artículo usando la etiqueta <b>article</b>, éste a su vez contendrá un contenedor  que se define con la etiqueta <b>div</b>, dentro de éste contenedor se le colocará un sub-subtítulo con la etiqueta <b>h4</b> y un texto de descripción que se colocará con la etiqueta <b>p</b>.
+        </section>
+        <!-- Footer -->
+        <section>
+          <h3>Footer.</h3>
+          <article class="pagweb1">
+            <div class="cuerpo">
+              <h6>body</h6>
+              <div class="principal">
+                <h6>main </h6>
+                <div class="seccion">
+                  <h6>section</h6>
+                  <div class="division">
+                    <h6>h3</h6>
+                    <h6>div></h6>
+                    <h6>p</h6>
+                    <div class="enlace">
+                      <h6>a</h6>
+                      <div class="cont">
+                        <h6>span</h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          Todavía dentro del <i>main</i> se crea otra sección con la etiqueta <b>section</b>, se coloca dentro de ella un título con <b>h3</b>, al final de ente <i>section</i> se coloca el copyright, pero antes del copyright y después del título se coloca su contenedor con el comando <b>div</b>, dentro de este contenedor se coloca un enlace con la etiqueta <b>a</b>, dentro de éste un <b>span</b> para colocar íconos, cada red social que se desee agregar será un enlace <i>a</i> con su respectivo <i>span</i>. Se cierra el <b>main</b>.<br/>
+        </section>
+      </section>
+    </main>
+    <!-- <footer>
+      <section>
+        Referencias:<br/>
+        <a target="_blank" href=""></a>
+      </section>
+    </footer> -->
+  </body>
 </html>
